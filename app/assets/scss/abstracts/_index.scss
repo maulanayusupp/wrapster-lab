@@ -1,0 +1,4 @@
+// Abstracts barrel — forwarded into every component via Vite `additionalData`.
+// MUST contain only tokens/mixins/functions (no CSS output) to avoid duplication.
+@forward 'variables';
+@forward 'mixins';

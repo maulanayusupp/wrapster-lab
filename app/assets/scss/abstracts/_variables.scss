@@ -1,0 +1,106 @@
+// =============================================================================
+// DESIGN TOKENS — single source of truth (SCSS side).
+// These compile-time values feed both SCSS logic and the CSS custom properties
+// declared in base/_root.scss. Never hardcode a hex/px in a component.
+// =============================================================================
+
+// --- Brand palette -----------------------------------------------------------
+$color-ink:          #05060d; // deepest background
+$color-void:         #070912; // page background
+$color-surface:      #0e1122; // cards / panels
+$color-surface-2:    #151934; // raised panels
+$color-line:         #232a4d; // hairline borders
+
+$color-white:        #f5f7ff;
+$color-mist:         #b8c0e0; // secondary text
+$color-muted:        #7b83a8; // tertiary text
+
+// Signature "profile ring" gradient stops (orange → pink → purple → blue)
+$color-orange:       #ff5a1f;
+$color-magenta:      #ff2d78;
+$color-purple:       #7c3aed;
+$color-violet:       #a855f7;
+$color-blue:         #2b6bff;
+$color-cyan:         #22d3ee;
+
+$color-primary:      $color-blue;
+$color-accent:       $color-orange;
+
+$color-success:      #22c55e;
+$color-warning:      #fbbf24;
+
+// --- Gradients ---------------------------------------------------------------
+$gradient-brand:  linear-gradient(100deg, #{$color-orange} 0%, #{$color-magenta} 34%, #{$color-purple} 66%, #{$color-blue} 100%);
+$gradient-ring:   conic-gradient(from 210deg, #{$color-orange}, #{$color-magenta}, #{$color-violet}, #{$color-blue}, #{$color-orange});
+$gradient-heat:   linear-gradient(120deg, #{$color-orange}, #{$color-magenta});
+$gradient-cool:   linear-gradient(120deg, #{$color-blue}, #{$color-violet});
+$gradient-fade:   linear-gradient(180deg, rgba(7, 9, 18, 0) 0%, #{$color-void} 100%);
+
+// --- Typography --------------------------------------------------------------
+$font-display: 'Archivo', 'Arial Narrow', system-ui, sans-serif;
+$font-body:    'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+$fw-regular:   400;
+$fw-medium:    500;
+$fw-semibold:  600;
+$fw-bold:      700;
+$fw-black:     900;
+
+// Fluid type scale (clamp) — display sizes lean poster-heavy.
+$fs-hero:   clamp(3rem, 9vw, 8.5rem);
+$fs-h1:     clamp(2.4rem, 6vw, 5rem);
+$fs-h2:     clamp(1.9rem, 4vw, 3.25rem);
+$fs-h3:     clamp(1.35rem, 2.2vw, 1.9rem);
+$fs-lead:   clamp(1.05rem, 1.5vw, 1.3rem);
+$fs-body:   1rem;
+$fs-sm:     0.875rem;
+$fs-xs:     0.75rem;
+
+// --- Spacing scale -----------------------------------------------------------
+$space-2xs:  0.25rem;
+$space-xs:   0.5rem;
+$space-sm:   0.75rem;
+$space-md:   1rem;
+$space-lg:   1.5rem;
+$space-xl:   2.5rem;
+$space-2xl:  4rem;
+$space-3xl:  6rem;
+$space-4xl:  9rem;
+
+// --- Radius / borders --------------------------------------------------------
+$radius-sm:   6px;
+$radius-md:   14px;
+$radius-lg:   24px;
+$radius-xl:   34px;
+$radius-pill: 999px;
+
+// --- Elevation ---------------------------------------------------------------
+$shadow-sm:   0 2px 8px rgba(0, 0, 0, 0.35);
+$shadow-md:   0 12px 40px rgba(0, 0, 0, 0.45);
+$shadow-glow: 0 0 40px rgba(124, 58, 237, 0.35);
+
+// --- Motion ------------------------------------------------------------------
+$ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+$ease-inout:  cubic-bezier(0.65, 0, 0.35, 1);
+$dur-fast:    0.18s;
+$dur-base:    0.35s;
+$dur-slow:    0.6s;
+
+// --- Layout ------------------------------------------------------------------
+$container-max: 1240px;
+$container-pad: clamp(1.25rem, 5vw, 4rem);
+$header-height: 76px;
+
+// --- Breakpoints -------------------------------------------------------------
+$bp-sm:  480px;
+$bp-md:  768px;
+$bp-lg:  1024px;
+$bp-xl:  1280px;
+
+// --- Z-index scale -----------------------------------------------------------
+$z-base:    1;
+$z-raised:  10;
+$z-sticky:  100;
+$z-header:  1000;
+$z-overlay: 2000;
+$z-modal:   3000;

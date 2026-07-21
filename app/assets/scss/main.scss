@@ -1,0 +1,10 @@
+// =============================================================================
+// GLOBAL STYLESHEET — the only file loaded via nuxt.config `css`.
+// Order matters: tokens → reset → type → utilities. Abstracts (variables/
+// mixins) are auto-injected by Vite, so they are NOT re-imported here.
+// Component-specific styles live in each component's scoped <style lang="scss">.
+// =============================================================================
+@use 'base/root';
+@use 'base/reset';
+@use 'base/typography';
+@use 'base/utilities';

@@ -1,0 +1,45 @@
+@use '../abstracts' as *;
+
+// Small, reusable utility classes (kept intentionally minimal) ----------------
+.u-container {
+  @include container;
+}
+
+.u-gradient-text {
+  @include gradient-text;
+}
+
+.u-sr-only {
+  @include visually-hidden;
+}
+
+.u-noscroll {
+  overflow: hidden;
+}
+
+// Page transition (configured via app.pageTransition in nuxt.config).
+.page-enter-active,
+.page-leave-active {
+  transition: opacity $dur-base $ease-out, transform $dur-base $ease-out;
+}
+.page-enter-from {
+  opacity: 0;
+  transform: translateY(12px);
+}
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+// Scroll-reveal primitive (progressive enhancement).
+// Content is visible by default (no-JS, crawlers, pre-hydration). The reveal
+// plugin adds `.reveal-on` to <html>; only then do we hide-then-animate, so a
+// broken/booting JS runtime never leaves content invisible.
+.reveal {
+  transition: opacity $dur-slow $ease-out, transform $dur-slow $ease-out;
+  will-change: opacity, transform;
+}
+.reveal-on .reveal:not(.is-visible) {
+  opacity: 0;
+  transform: translateY(28px);
+}

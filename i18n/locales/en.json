@@ -1,0 +1,159 @@
+{
+  "seo": {
+    "home": {
+      "title": "Premium Motorcycle & Car Wrapping",
+      "desc": "Wrapster Lab turns stock rides into stunning statements. Premium full-print wraps, custom concepts, and color changes in Cimahi — shipped nationwide."
+    }
+  },
+  "nav": {
+    "services": "Services",
+    "work": "Work",
+    "process": "Process",
+    "why": "Why Us",
+    "community": "Community",
+    "book": "Book a Wrap",
+    "menu": "Menu",
+    "close": "Close"
+  },
+  "language": {
+    "label": "Language",
+    "en": "English",
+    "id": "Bahasa Indonesia"
+  },
+  "hero": {
+    "badge": "Premium Wrapping Lab · Cimahi",
+    "titleLead": "From",
+    "titleStock": "Stock",
+    "titleTo": "to",
+    "titleStunning": "Stunning",
+    "subtitle": "We don't just change colors — we engineer identity. Full-print wraps, custom concepts, and precision color changes for motorcycles & cars.",
+    "ctaPrimary": "Start Your Build",
+    "ctaSecondary": "See the Work",
+    "scroll": "Scroll to explore"
+  },
+  "marquee": {
+    "items": ["Full Print", "Custom Concept", "Body Only", "Color Change", "Car Wrapping", "Ship Nationwide", "Stock to Stunning"]
+  },
+  "services": {
+    "kicker": "What we do",
+    "title": "Every ride, reimagined",
+    "lead": "One lab, six ways to transform your machine. From subtle color swaps to full-blown custom concepts.",
+    "items": {
+      "fullPrint": { "title": "Full Print Wrapping", "desc": "Unlimited custom-printed designs across every panel — from race liveries to character art." },
+      "bodyOnly": { "title": "Body Only Wrapping", "desc": "Send just your body panels. We wrap, QC, and ship them back ready to bolt on." },
+      "carWrap": { "title": "Car Wrapping", "desc": "Full color changes and branding for cars — commercial fleets to personal builds." },
+      "concept": { "title": "Custom Concept Design", "desc": "Themed builds — anime, characters, racing. We design the concept, you approve the mockup." },
+      "colorChange": { "title": "Color Change", "desc": "Gloss, satin, matte, and chrome finishes from an 80+ color wall you can see in person." },
+      "ship": { "title": "Order Without Your Bike", "desc": "Ship your body to us or we ship the sticker to you. Nationwide, no bike drop-off needed." }
+    }
+  },
+  "process": {
+    "kicker": "How it works",
+    "title": "The Stock-to-Stunning process",
+    "lead": "A precise, five-step pipeline built to protect your ride and nail the finish.",
+    "steps": {
+      "consult": { "title": "Consult & Concept", "desc": "Tell us your vibe. We scope the concept, materials, and timeline together." },
+      "design": { "title": "Design Mockup", "desc": "Our designers render a full mockup so you see the result before we cut a thing." },
+      "wrap": { "title": "Precision Wrapping", "desc": "Certified installers wrap every curve with premium, bubble-free material." },
+      "qc": { "title": "QC & 7-Day Check", "desc": "Quality check on finish, edges, and adhesion — plus a follow-up after one week." },
+      "ride": { "title": "Ride Stunning", "desc": "Roll out with a machine that turns heads and reflects exactly who you are." }
+    }
+  },
+  "features": {
+    "kicker": "Why Wrapster",
+    "title": "Built like a lab, backed like a promise",
+    "lead": "Premium materials, real guarantees, and a team obsessed with the details.",
+    "items": {
+      "material": { "title": "Premium Materials", "desc": "Automotive-grade films engineered for color depth and long-term durability." },
+      "warranty": { "title": "After-Sales Warranty", "desc": "Covered against air bubbling, edge peeling, and installation faults." },
+      "qc": { "title": "Multi-Stage QC", "desc": "Finish QC, one-week usage check, and maintenance guidance on every job." },
+      "nationwide": { "title": "Nationwide Shipping", "desc": "Order from anywhere in Indonesia — send the body or receive the sticker." },
+      "team": { "title": "Experienced Team", "desc": "A crew that has transformed 320+ builds across scooters, sport bikes, and cars." },
+      "custom": { "title": "Unlimited Concepts", "desc": "If you can dream it, we can print it. No template limits on custom work." }
+    }
+  },
+  "stats": {
+    "followers": "Community members",
+    "projects": "Builds transformed",
+    "colors": "Colors on the wall",
+    "warranty": "Day quality check"
+  },
+  "gallery": {
+    "kicker": "The lab floor",
+    "title": "Stock to stunning, on repeat",
+    "lead": "A slice of what rolls out of the Wrapster Lab. Every build is one of one.",
+    "cat": {
+      "concept": "Custom Concept",
+      "street": "Street Style",
+      "race": "Race Livery",
+      "adventure": "Adventure"
+    },
+    "cta": "See more on Instagram"
+  },
+  "colors": {
+    "kicker": "The color wall",
+    "title": "80+ finishes, one perfect match",
+    "lead": "Gloss, satin, matte, and chrome — swatched and ready. Here's a taste of the spectrum.",
+    "note": "Visit the lab to see the full color wall in person.",
+    "names": {
+      "inferno": "Inferno Orange",
+      "magma": "Magma Pink",
+      "ultra": "Ultra Violet",
+      "nebula": "Nebula Purple",
+      "voltage": "Voltage Blue",
+      "cyber": "Cyber Cyan",
+      "toxic": "Toxic Lime",
+      "gold": "Liquid Gold",
+      "phantom": "Phantom Black",
+      "frost": "Frost White"
+    },
+    "finish": {
+      "gloss": "Gloss",
+      "satin": "Satin",
+      "matte": "Matte",
+      "chrome": "Chrome"
+    }
+  },
+  "testimonials": {
+    "kicker": "Rider love",
+    "title": "Words from the family",
+    "items": {
+      "t1": "Dropped off a stock scooter, picked up a head-turner. The finish is flawless and the crew actually cares.",
+      "t2": "The concept mockup nailed my idea on the first try. Everyone at the meetup asked who did the wrap.",
+      "t3": "Shipped my body panels from out of town and got them back perfect. Nationwide service is the real deal."
+    }
+  },
+  "event": {
+    "kicker": "Community",
+    "title": "Wrapster Sunmori",
+    "desc": "Riding, hanging out, and good vibes with the whole Wrapster family. Wrapped or not, every rider is welcome to join.",
+    "route": "Start: Tracker Martadinata → Finish: KFC Sukawangi",
+    "dateLabel": "Mark your calendar",
+    "cta": "Join the ride",
+    "benefits": ["Free KFC voucher for 200 riders", "Rp400K full-print wrap discount", "Games & door prizes", "Wrapster merch for every rider"]
+  },
+  "contact": {
+    "kicker": "Get started",
+    "title": "Let's build something loud",
+    "lead": "Tell us about your ride and your idea. The lab is ready when you are.",
+    "phoneLabel": "Call or WhatsApp",
+    "addressLabel": "Visit the lab",
+    "socialLabel": "Follow the builds",
+    "ctaWhatsapp": "Chat on WhatsApp",
+    "ctaMaps": "Open in Maps",
+    "waMessage": "Hi Wrapster Lab! I'd like to talk about wrapping my ride."
+  },
+  "cta": {
+    "title": "Your ride deserves better than stock",
+    "subtitle": "Book a slot at the lab and let's turn it into a statement.",
+    "button": "Book a Wrap"
+  },
+  "footer": {
+    "tagline": "Premium motorcycle & car wrapping. Stock to Stunning.",
+    "explore": "Explore",
+    "connect": "Connect",
+    "visit": "Visit",
+    "rights": "All rights reserved.",
+    "madeWith": "Crafted in the lab, in Cimahi."
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "seo": {
+    "home": {
+      "title": "Wrapping Motor & Mobil Premium",
+      "desc": "Wrapster Lab mengubah tampilan standar jadi memukau. Wrapping full-print premium, konsep custom, dan ganti warna di Cimahi — kirim ke seluruh Indonesia."
+    }
+  },
+  "nav": {
+    "services": "Layanan",
+    "work": "Hasil",
+    "process": "Proses",
+    "why": "Kenapa Kami",
+    "community": "Komunitas",
+    "book": "Pesan Sekarang",
+    "menu": "Menu",
+    "close": "Tutup"
+  },
+  "language": {
+    "label": "Bahasa",
+    "en": "English",
+    "id": "Bahasa Indonesia"
+  },
+  "hero": {
+    "badge": "Lab Wrapping Premium · Cimahi",
+    "titleLead": "Dari",
+    "titleStock": "Standar",
+    "titleTo": "jadi",
+    "titleStunning": "Memukau",
+    "subtitle": "Kami bukan sekadar ganti warna — kami merancang identitas. Wrapping full-print, konsep custom, dan ganti warna presisi untuk motor & mobil.",
+    "ctaPrimary": "Mulai Konsepmu",
+    "ctaSecondary": "Lihat Hasil",
+    "scroll": "Gulir untuk lihat"
+  },
+  "marquee": {
+    "items": ["Full Print", "Konsep Custom", "Body Only", "Ganti Warna", "Wrapping Mobil", "Kirim Nasional", "Stock to Stunning"]
+  },
+  "services": {
+    "kicker": "Yang kami kerjakan",
+    "title": "Setiap tunggangan, dirombak ulang",
+    "lead": "Satu lab, enam cara mengubah kendaraanmu. Dari ganti warna simpel sampai konsep custom total.",
+    "items": {
+      "fullPrint": { "title": "Wrapping Full Print", "desc": "Desain cetak custom tanpa batas di semua panel — dari livery balap sampai karakter." },
+      "bodyOnly": { "title": "Wrapping Body Only", "desc": "Cukup kirim body-nya. Kami wrapping, QC, dan kirim balik siap pasang." },
+      "carWrap": { "title": "Wrapping Mobil", "desc": "Ganti warna total dan branding untuk mobil — armada bisnis sampai mobil pribadi." },
+      "concept": { "title": "Desain Konsep Custom", "desc": "Build bertema — anime, karakter, racing. Kami rancang konsepnya, kamu setujui mockup-nya." },
+      "colorChange": { "title": "Ganti Warna", "desc": "Finishing gloss, satin, matte, dan chrome dari color wall 80+ warna yang bisa dilihat langsung." },
+      "ship": { "title": "Order Tanpa Bawa Motor", "desc": "Kirim body-mu ke kami atau kami kirim stikernya ke kamu. Nasional, tanpa antar motor." }
+    }
+  },
+  "process": {
+    "kicker": "Cara kerjanya",
+    "title": "Proses Stock-to-Stunning",
+    "lead": "Alur lima langkah yang presisi, dirancang untuk menjaga tunggangan dan menyempurnakan hasil.",
+    "steps": {
+      "consult": { "title": "Konsultasi & Konsep", "desc": "Ceritakan gayamu. Kita tentukan konsep, material, dan timeline bareng." },
+      "design": { "title": "Mockup Desain", "desc": "Desainer kami buat mockup lengkap agar kamu lihat hasilnya sebelum kami potong." },
+      "wrap": { "title": "Wrapping Presisi", "desc": "Installer bersertifikat membungkus setiap lekuk dengan material premium bebas gelembung." },
+      "qc": { "title": "QC & Cek 7 Hari", "desc": "Cek kualitas finishing, tepi, dan daya rekat — plus follow-up setelah satu minggu." },
+      "ride": { "title": "Tampil Memukau", "desc": "Melaju dengan tunggangan yang mencuri perhatian dan mencerminkan dirimu." }
+    }
+  },
+  "features": {
+    "kicker": "Kenapa Wrapster",
+    "title": "Dikerjakan seperti lab, dijamin seperti janji",
+    "lead": "Material premium, garansi nyata, dan tim yang obsesif pada detail.",
+    "items": {
+      "material": { "title": "Material Premium", "desc": "Film kelas otomotif yang dirancang untuk warna pekat dan tahan lama." },
+      "warranty": { "title": "Garansi After-Sales", "desc": "Ditanggung dari gelembung udara, ujung terkelupas, dan kesalahan pemasangan." },
+      "qc": { "title": "QC Bertahap", "desc": "QC finishing, cek pemakaian satu minggu, dan panduan perawatan di tiap pengerjaan." },
+      "nationwide": { "title": "Kirim Se-Nusantara", "desc": "Order dari mana saja di Indonesia — kirim body atau terima stikernya." },
+      "team": { "title": "Tim Berpengalaman", "desc": "Kru yang sudah merombak 320+ build, dari skutik, motor sport, sampai mobil." },
+      "custom": { "title": "Konsep Tanpa Batas", "desc": "Kalau bisa kamu bayangkan, kami bisa cetak. Tanpa batasan template untuk custom." }
+    }
+  },
+  "stats": {
+    "followers": "Anggota komunitas",
+    "projects": "Build dirombak",
+    "colors": "Warna di color wall",
+    "warranty": "Hari cek kualitas"
+  },
+  "gallery": {
+    "kicker": "Lantai lab",
+    "title": "Stock to stunning, tanpa henti",
+    "lead": "Cuplikan hasil yang keluar dari Wrapster Lab. Setiap build satu-satunya di dunia.",
+    "cat": {
+      "concept": "Konsep Custom",
+      "street": "Gaya Jalanan",
+      "race": "Livery Balap",
+      "adventure": "Adventure"
+    },
+    "cta": "Lihat lainnya di Instagram"
+  },
+  "colors": {
+    "kicker": "Color wall",
+    "title": "80+ finishing, satu yang paling pas",
+    "lead": "Gloss, satin, matte, dan chrome — tersedia dan siap. Ini sedikit dari spektrumnya.",
+    "note": "Datang ke lab untuk lihat color wall lengkapnya langsung.",
+    "names": {
+      "inferno": "Inferno Orange",
+      "magma": "Magma Pink",
+      "ultra": "Ultra Violet",
+      "nebula": "Nebula Purple",
+      "voltage": "Voltage Blue",
+      "cyber": "Cyber Cyan",
+      "toxic": "Toxic Lime",
+      "gold": "Liquid Gold",
+      "phantom": "Phantom Black",
+      "frost": "Frost White"
+    },
+    "finish": {
+      "gloss": "Gloss",
+      "satin": "Satin",
+      "matte": "Matte",
+      "chrome": "Chrome"
+    }
+  },
+  "testimonials": {
+    "kicker": "Kata rider",
+    "title": "Cerita dari keluarga",
+    "items": {
+      "t1": "Antar motor standar, pulang bawa motor yang bikin nengok. Finishing-nya rapi dan timnya benar-benar peduli.",
+      "t2": "Mockup konsepnya pas dengan ide saya sejak percobaan pertama. Semua di meetup nanya siapa yang wrapping.",
+      "t3": "Kirim panel body dari luar kota dan balik sempurna. Layanan nasionalnya beneran mantap."
+    }
+  },
+  "event": {
+    "kicker": "Komunitas",
+    "title": "Wrapster Sunmori",
+    "desc": "Riding, kumpul, dan seru-seruan bareng keluarga besar Wrapster. Sudah wrapping atau belum, semua rider boleh ikut meramaikan.",
+    "route": "Start: Tracker Martadinata → Finish: KFC Sukawangi",
+    "dateLabel": "Catat tanggalnya",
+    "cta": "Ikut riding",
+    "benefits": ["Voucher KFC gratis untuk 200 rider", "Diskon wrapping full-print Rp400rb", "Games & doorprize", "Merchandise Wrapster untuk tiap rider"]
+  },
+  "contact": {
+    "kicker": "Mulai sekarang",
+    "title": "Yuk bikin sesuatu yang mencolok",
+    "lead": "Ceritakan tunggangan dan idemu. Lab siap kapan pun kamu siap.",
+    "phoneLabel": "Telepon atau WhatsApp",
+    "addressLabel": "Kunjungi lab",
+    "socialLabel": "Ikuti hasil build",
+    "ctaWhatsapp": "Chat via WhatsApp",
+    "ctaMaps": "Buka di Maps",
+    "waMessage": "Halo Wrapster Lab! Saya mau konsultasi soal wrapping tunggangan saya."
+  },
+  "cta": {
+    "title": "Tungganganmu layak lebih dari sekadar standar",
+    "subtitle": "Pesan slot di lab dan mari ubah jadi sesuatu yang mencolok.",
+    "button": "Pesan Wrapping"
+  },
+  "footer": {
+    "tagline": "Wrapping motor & mobil premium. Stock to Stunning.",
+    "explore": "Jelajahi",
+    "connect": "Terhubung",
+    "visit": "Kunjungi",
+    "rights": "Seluruh hak cipta dilindungi.",
+    "madeWith": "Dikerjakan di lab, di Cimahi."
+  }
+}

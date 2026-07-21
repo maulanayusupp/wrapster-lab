@@ -1,0 +1,22 @@
+{
+  "name": "wrapster-lab",
+  "private": true,
+  "type": "module",
+  "description": "Wrapster Lab — Premium Motorcycle & Car Wrapping. Stock to Stunning.",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "typecheck": "nuxt typecheck",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@nuxtjs/i18n": "^10.4.1",
+    "nuxt": "^4.5.0",
+    "sass": "^1.101.3",
+    "vue": "^3.5.40",
+    "vue-router": "^5.2.0"
+  }
+}

@@ -1,0 +1,52 @@
+@use '../abstracts' as *;
+
+// Global type rules ----------------------------------------------------------
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font-display;
+  font-weight: $fw-black;
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+h1 { font-size: $fs-h1; }
+h2 { font-size: $fs-h2; }
+h3 { font-size: $fs-h3; letter-spacing: -0.01em; }
+
+p {
+  text-wrap: pretty;
+}
+
+strong,
+b {
+  font-weight: $fw-bold;
+}
+
+small {
+  font-size: $fs-sm;
+}
+
+// Poster-grade display word (e.g. hero headline words, model names).
+.u-display {
+  font-family: $font-display;
+  font-weight: $fw-black;
+  text-transform: uppercase;
+  letter-spacing: -0.015em;
+  line-height: 0.9;
+}
+
+// Kicker / eyebrow label above headings.
+.u-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-xs;
+  font-family: $font-body;
+  font-weight: $fw-bold;
+  font-size: $fs-xs;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--c-text-mist);
+}

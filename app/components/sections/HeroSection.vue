@@ -20,10 +20,58 @@ onMounted(() => {
 onBeforeUnmount(() => clearInterval(timer))
 
 const activeModel = computed(() => posterModels[activeIndex.value])
+
+// --- Parallax: 3D tilt on mouse move + gentle drift on scroll ----------------
+const heroEl = ref<HTMLElement | null>(null)
+const visualEl = ref<HTMLElement | null>(null)
+const posterEl = ref<HTMLElement | null>(null)
+
+function setTilt(rx: number, ry: number) {
+  posterEl.value?.style.setProperty('--rx', `${rx}deg`)
+  posterEl.value?.style.setProperty('--ry', `${ry}deg`)
+}
+
+function onPointerMove(e: PointerEvent) {
+  const rect = visualEl.value?.getBoundingClientRect()
+  if (!rect) return
+  const dx = (e.clientX - (rect.left + rect.width / 2)) / (rect.width / 2)
+  const dy = (e.clientY - (rect.top + rect.height / 2)) / (rect.height / 2)
+  const clamp = (v: number) => Math.max(-1, Math.min(1, v))
+  setTilt(clamp(dx) * 9, clamp(dy) * -9)
+}
+
+function onPointerLeave() {
+  setTilt(0, 0)
+}
+
+function onScroll() {
+  const y = window.scrollY
+  visualEl.value?.style.setProperty('--sy', `${Math.min(y * 0.12, 80)}px`)
+}
+
+onMounted(() => {
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  const coarse = window.matchMedia('(pointer: coarse)').matches
+  if (reduced) return
+
+  window.addEventListener('scroll', onScroll, { passive: true })
+  onScroll()
+
+  if (!coarse && heroEl.value) {
+    heroEl.value.addEventListener('pointermove', onPointerMove)
+    heroEl.value.addEventListener('pointerleave', onPointerLeave)
+  }
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', onScroll)
+  heroEl.value?.removeEventListener('pointermove', onPointerMove)
+  heroEl.value?.removeEventListener('pointerleave', onPointerLeave)
+})
 </script>
 
 <template>
-  <section :id="SECTION_IDS.hero" class="hero">
+  <section :id="SECTION_IDS.hero" ref="heroEl" class="hero">
     <div class="hero__bg" aria-hidden="true">
       <span class="hero__grid" />
       <span class="hero__blob hero__blob--a" />
@@ -55,8 +103,8 @@ const activeModel = computed(() => posterModels[activeIndex.value])
         </div>
       </div>
 
-      <div class="hero__visual" aria-hidden="true">
-        <div class="poster">
+      <div ref="visualEl" class="hero__visual" aria-hidden="true">
+        <div ref="posterEl" class="poster">
           <span class="poster__brand">Yamaha</span>
           <Transition name="poster-word" mode="out-in">
             <span :key="activeModel" class="poster__model u-display">{{ activeModel }}</span>
@@ -197,9 +245,11 @@ const activeModel = computed(() => posterModels[activeIndex.value])
   }
 
   // Positioning context for the floating chips (keeps them on the poster,
-  // not anchored to the full-width .hero).
+  // not anchored to the full-width .hero). --sy drives gentle scroll drift.
   &__visual {
     position: relative;
+    transform: translate3d(0, var(--sy, 0), 0);
+    will-change: transform;
   }
 
   &__actions {
@@ -243,8 +293,12 @@ const activeModel = computed(() => posterModels[activeIndex.value])
   overflow: hidden;
   background: $gradient-cool;
   box-shadow: $shadow-md, $shadow-glow;
-  transform: perspective(1200px) rotateY(-14deg) rotateX(4deg) rotate(2deg);
-  transition: transform $dur-slow $ease-out;
+  // Base tilt + mouse-driven --rx/--ry (set from script). Smoothed follow.
+  transform: perspective(1200px)
+    rotateX(calc(4deg + var(--ry, 0deg)))
+    rotateY(calc(-12deg + var(--rx, 0deg)))
+    rotate(1.5deg);
+  transition: transform 0.25s $ease-out;
 
   &::before {
     content: '';
@@ -254,10 +308,6 @@ const activeModel = computed(() => posterModels[activeIndex.value])
       radial-gradient(circle at 70% 20%, rgba(255, 255, 255, 0.28), transparent 45%),
       linear-gradient(160deg, transparent, rgba(5, 6, 13, 0.55));
     mix-blend-mode: screen;
-  }
-
-  &:hover {
-    transform: perspective(1200px) rotateY(-6deg) rotateX(2deg) rotate(0deg);
   }
 
   &__brand {

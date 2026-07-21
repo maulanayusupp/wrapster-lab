@@ -2,7 +2,7 @@
   "seo": {
     "home": {
       "title": "Premium Motorcycle & Car Wrapping",
-      "desc": "Wrapster Lab turns stock rides into stunning statements. Premium full-print wraps, custom concepts, and color changes in Cimahi — shipped nationwide."
+      "desc": "Wrapster Lab turns stock rides into stunning statements. Premium full-print wraps, custom concepts, and precision color changes — shipped nationwide."
     }
   },
   "nav": {
@@ -21,7 +21,7 @@
     "id": "Bahasa Indonesia"
   },
   "hero": {
-    "badge": "Premium Wrapping Lab · Cimahi",
+    "badge": "Premium Wrapping Lab",
     "titleLead": "From",
     "titleStock": "Stock",
     "titleTo": "to",
@@ -159,6 +159,6 @@
     "connect": "Connect",
     "visit": "Visit",
     "rights": "All rights reserved.",
-    "madeWith": "Crafted in the lab, in Cimahi."
+    "madeWith": "Crafted in the lab."
   }
 }

@@ -2,7 +2,7 @@
   "seo": {
     "home": {
       "title": "Wrapping Motor & Mobil Premium",
-      "desc": "Wrapster Lab mengubah tampilan standar jadi memukau. Wrapping full-print premium, konsep custom, dan ganti warna di Cimahi — kirim ke seluruh Indonesia."
+      "desc": "Wrapster Lab mengubah tampilan standar jadi memukau. Wrapping full-print premium, konsep custom, dan ganti warna presisi — kirim ke seluruh Indonesia."
     }
   },
   "nav": {
@@ -21,7 +21,7 @@
     "id": "Bahasa Indonesia"
   },
   "hero": {
-    "badge": "Lab Wrapping Premium · Cimahi",
+    "badge": "Lab Wrapping Premium",
     "titleLead": "Dari",
     "titleStock": "Standar",
     "titleTo": "jadi",
@@ -159,6 +159,6 @@
     "connect": "Terhubung",
     "visit": "Kunjungi",
     "rights": "Seluruh hak cipta dilindungi.",
-    "madeWith": "Dikerjakan di lab, di Cimahi."
+    "madeWith": "Dikerjakan di lab."
   }
 }

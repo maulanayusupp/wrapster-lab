@@ -354,4 +354,35 @@ const activeModel = computed(() => posterModels[activeIndex.value])
 }
 .poster-word-enter-from { opacity: 0; transform: translateY(0.4em); }
 .poster-word-leave-to { opacity: 0; transform: translateY(-0.4em); }
+
+// --- Cinematic entrance + gradient shimmer (motion-safe only) ----------------
+@media (prefers-reduced-motion: no-preference) {
+  .hero__content > * {
+    animation: hero-in 0.85s $ease-out both;
+  }
+  .hero__content > *:nth-child(1) { animation-delay: 0.05s; }
+  .hero__content > *:nth-child(2) { animation-delay: 0.15s; }
+  .hero__content > *:nth-child(3) { animation-delay: 0.28s; }
+  .hero__content > *:nth-child(4) { animation-delay: 0.4s; }
+
+  .hero__visual {
+    animation: hero-in 1s $ease-out 0.3s both;
+  }
+
+  .hero__title-stunning {
+    background-size: 220% 100%;
+    animation:
+      hero-in 0.85s $ease-out 0.15s both,
+      hero-shimmer 7s ease-in-out 1s infinite;
+  }
+}
+
+@keyframes hero-in {
+  from { opacity: 0; transform: translateY(26px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes hero-shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
 </style>

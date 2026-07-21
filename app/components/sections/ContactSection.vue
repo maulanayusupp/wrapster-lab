@@ -31,21 +31,21 @@ const mapsHref = computed(() => appConfig.contact.maps)
       />
 
       <div class="contact__cards">
-        <a :href="waHref" target="_blank" rel="noopener" v-reveal class="ccard">
+        <a :href="waHref" target="_blank" rel="noopener" v-reveal v-spotlight class="ccard">
           <div class="ccard__icon"><AppIcon name="whatsapp" :size="24" /></div>
           <span class="ccard__label">{{ t('contact.phoneLabel') }}</span>
           <span class="ccard__value">{{ appConfig.contact.phoneDisplay }}</span>
           <span class="ccard__action">{{ t('contact.ctaWhatsapp') }} <AppIcon name="arrow-right" :size="15" /></span>
         </a>
 
-        <a :href="mapsHref" target="_blank" rel="noopener" v-reveal="80" class="ccard">
+        <a :href="mapsHref" target="_blank" rel="noopener" v-reveal="80" v-spotlight class="ccard">
           <div class="ccard__icon"><AppIcon name="map-pin" :size="24" /></div>
           <span class="ccard__label">{{ t('contact.addressLabel') }}</span>
           <span class="ccard__value">{{ appConfig.contact.address }}</span>
           <span class="ccard__action">{{ t('contact.ctaMaps') }} <AppIcon name="arrow-right" :size="15" /></span>
         </a>
 
-        <a :href="appConfig.social.instagram" target="_blank" rel="noopener" v-reveal="160" class="ccard">
+        <a :href="appConfig.social.instagram" target="_blank" rel="noopener" v-reveal="160" v-spotlight class="ccard">
           <div class="ccard__icon"><AppIcon name="instagram" :size="24" /></div>
           <span class="ccard__label">{{ t('contact.socialLabel') }}</span>
           <span class="ccard__value">{{ appConfig.social.instagramHandle }}</span>
@@ -108,6 +108,8 @@ const mapsHref = computed(() => appConfig.contact.maps)
 }
 
 .ccard {
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: $space-xs;
@@ -116,6 +118,11 @@ const mapsHref = computed(() => appConfig.contact.maps)
   background: var(--c-surface);
   border: 1px solid var(--c-line);
   transition: transform $dur-base $ease-out, border-color $dur-base;
+
+  & > *:not(.spotlight-layer) {
+    position: relative;
+    z-index: 1;
+  }
 
   &:hover {
     transform: translateY(-5px);

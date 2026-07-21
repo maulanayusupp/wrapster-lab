@@ -8,11 +8,16 @@ import { NAV_LINKS, SECTION_IDS } from '~/utils/constants'
 const localePath = useLocalePath()
 const scrolled = ref(false)
 const menuOpen = ref(false)
+const progress = ref<HTMLElement | null>(null)
 
 const home = computed(() => localePath('/'))
 
 function onScroll() {
   scrolled.value = window.scrollY > 24
+  // Drive the top scroll-progress bar (0 → 1).
+  const max = document.documentElement.scrollHeight - window.innerHeight
+  const ratio = max > 0 ? window.scrollY / max : 0
+  progress.value?.style.setProperty('--progress', String(Math.min(1, Math.max(0, ratio))))
 }
 
 function closeMenu() {
@@ -37,6 +42,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
+  <div ref="progress" class="scroll-progress" aria-hidden="true" />
   <header class="header" :class="{ 'is-scrolled': scrolled }">
     <div class="header__inner u-container">
       <NuxtLink :to="home" class="header__brand" @click="closeMenu">

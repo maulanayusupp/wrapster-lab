@@ -42,7 +42,7 @@ app/
     layout/      AppHeader, AppFooter, LanguageSwitcher, TheLogo
     sections/    one component per landing section (Hero, Services, …)
   composables/   useAppSeo, useReveal            (helpers, auto-imported)
-  plugins/       reveal.ts (v-reveal directive)
+  plugins/       reveal.ts (v-reveal), spotlight.ts (v-spotlight cursor glow)
   services/      content.service.ts + types.ts   (the data boundary)
   utils/         constants.ts, format.ts         (pure helpers, auto-imported)
   layouts/       default.vue
@@ -133,6 +133,12 @@ so `sections/HeroSection.vue` is `<HeroSection>`. Keep filenames globally unique
   (adds `.reveal-on` to `<html>` before hiding-then-animating).
 - Everything responsive via fluid `clamp()` type and mixin breakpoints
   (`@include respond(md)`). Mobile drawer nav below `lg`.
+- **Signature interactions (all motion-safe / disabled under reduced motion):**
+  cinematic staggered hero entrance + gradient shimmer on "STUNNING";
+  `v-spotlight` cursor-follow glow on cards (glow layer `z-index:0`, host content
+  lifted to `z-index:1`); count-up stat numbers on scroll-in; a fixed film-grain
+  overlay (`.grain`) and top `.scroll-progress` bar. Keep new flourishes tasteful
+  and cohesive — the bar is "premium lab", not carnival.
 
 ---
 

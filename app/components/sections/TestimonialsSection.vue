@@ -20,6 +20,7 @@ const testimonials = contentService.getTestimonials()
           v-for="(item, i) in testimonials"
           :key="item.id"
           v-reveal="i * 80"
+          v-spotlight
           class="quote"
         >
           <AppIcon name="quote" :size="34" class="quote__mark" />
@@ -51,6 +52,8 @@ const testimonials = contentService.getTestimonials()
 }
 
 .quote {
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: $space-md;
@@ -59,6 +62,11 @@ const testimonials = contentService.getTestimonials()
   background: var(--c-surface);
   border: 1px solid var(--c-line);
   transition: transform $dur-base $ease-out, border-color $dur-base;
+
+  & > *:not(.spotlight-layer) {
+    position: relative;
+    z-index: 1;
+  }
 
   &:hover { transform: translateY(-4px); border-color: rgba(43, 140, 255, 0.4); }
 

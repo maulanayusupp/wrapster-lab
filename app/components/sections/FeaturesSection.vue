@@ -21,6 +21,7 @@ const features = contentService.getFeatures()
           v-for="(feature, i) in features"
           :key="feature.id"
           v-reveal="i * 60"
+          v-spotlight
           class="feature"
         >
           <div class="feature__icon">
@@ -51,6 +52,8 @@ const features = contentService.getFeatures()
 }
 
 .feature {
+  position: relative;
+  overflow: hidden;
   display: flex;
   gap: $space-md;
   padding: $space-lg;
@@ -58,6 +61,12 @@ const features = contentService.getFeatures()
   border: 1px solid var(--c-line);
   background: linear-gradient(180deg, var(--c-surface), transparent);
   transition: border-color $dur-base, transform $dur-base $ease-out;
+
+  // Keep content above the injected cursor-spotlight layer.
+  & > *:not(.spotlight-layer) {
+    position: relative;
+    z-index: 1;
+  }
 
   &:hover {
     transform: translateY(-4px);

@@ -36,7 +36,12 @@ of an improvement, add it here (per the rules in `CLAUDE.md`).
 - [ ] Cookie/consent + analytics (respecting privacy).
 - [ ] Instagram feed embed or periodic sync for the gallery.
 
-## Polish
+## Polish — done ✓
+- [x] Wow-factor pass: staggered hero entrance + gradient shimmer, `v-spotlight`
+      cursor glow on cards, count-up stats, film-grain overlay, scroll-progress
+      bar. All disabled under `prefers-reduced-motion`.
+
+## Polish — next
 - [ ] Add `@nuxt/fonts` to self-host Archivo/Inter (drop Google Fonts request,
       improves privacy + LCP).
 - [ ] Lighthouse pass (a11y contrast on muted text, focus order, reduced-motion).

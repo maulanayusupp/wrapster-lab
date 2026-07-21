@@ -15,7 +15,7 @@ withDefaults(defineProps<Props>(), { align: 'left' })
       <span class="heading__kicker-line" aria-hidden="true" />
       {{ kicker }}
     </span>
-    <h2 v-reveal.wipe="80" class="heading__title">{{ title }}</h2>
+    <h2 v-reveal="80" class="heading__title">{{ title }}</h2>
     <p v-if="lead" v-reveal="160" class="heading__lead">{{ lead }}</p>
   </header>
 </template>
@@ -24,9 +24,9 @@ withDefaults(defineProps<Props>(), { align: 'left' })
 .heading {
   display: flex;
   flex-direction: column;
-  gap: $space-lg;
+  gap: $space-md;
   max-width: 48rem;
-  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: clamp(1.75rem, 3.5vw, 2.75rem);
 
   &--center {
     align-items: center;

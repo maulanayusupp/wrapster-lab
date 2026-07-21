@@ -42,7 +42,7 @@ app/
     layout/      AppHeader, AppFooter, LanguageSwitcher, TheLogo
     sections/    one component per landing section (Hero, Services, …)
   composables/   useAppSeo, useReveal            (helpers, auto-imported)
-  plugins/       reveal.ts (v-reveal / v-reveal.wipe), spotlight.ts (v-spotlight),
+  plugins/       reveal.ts (v-reveal), spotlight.ts (v-spotlight),
                  magnetic.ts (v-magnetic), parallax.ts (v-parallax scroll drift)
   services/      content.service.ts + types.ts   (the data boundary)
   utils/         constants.ts, format.ts         (pure helpers, auto-imported)
@@ -142,7 +142,7 @@ so `sections/HeroSection.vue` is `<HeroSection>`. Keep filenames globally unique
   - Hero poster **parallax**: 3D tilt toward cursor (`--rx/--ry`) + scroll drift (`--sy`).
   - **Magnetic** CTAs (`v-magnetic` → CSS `translate`, composes with `:active` scale).
   - `v-spotlight` cursor-follow glow on cards (glow layer `z-index:0`, content `z-index:1`).
-  - Count-up stat numbers on scroll-in; `v-reveal.wipe` clip-path section headings.
+  - Count-up stat numbers on scroll-in; fade-up `v-reveal` on section headings.
   - Fixed film-grain overlay (`.grain`) + top `.scroll-progress` bar.
   - Sunmori partner marquee (text wordmarks — not logo artwork).
   - Glass + holographic hero poster; `v-parallax` scroll-drift on decorative

@@ -44,7 +44,6 @@ of an improvement, add it here (per the rules in `CLAUDE.md`).
 - [x] Hero poster parallax (3D tilt on mouse + scroll drift).
 - [x] Magnetic CTA buttons (`v-magnetic`).
 - [x] Sunmori partner marquee (text wordmarks — replace with licensed logos if available).
-- [x] Cinematic `v-reveal.wipe` clip-path reveal on section headings.
 
 ## Polish — next
 - [ ] Add `@nuxt/fonts` to self-host Archivo/Inter (drop Google Fonts request,

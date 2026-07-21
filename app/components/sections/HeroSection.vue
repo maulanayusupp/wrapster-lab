@@ -292,7 +292,12 @@ onBeforeUnmount(() => {
   justify-content: space-between;
   overflow: hidden;
   background: $gradient-cool;
-  box-shadow: $shadow-md, $shadow-glow;
+  // Layered depth + glass edge (inset top gloss + hairline rim).
+  box-shadow:
+    0 40px 80px -20px rgba(0, 0, 0, 0.6),
+    0 0 60px -10px rgba(47, 92, 255, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
   // Base tilt + mouse-driven --rx/--ry (set from script). Smoothed follow.
   transform: perspective(1200px)
     rotateX(calc(4deg + var(--ry, 0deg)))
@@ -300,14 +305,35 @@ onBeforeUnmount(() => {
     rotate(1.5deg);
   transition: transform 0.25s $ease-out;
 
+  // Ambient sheen + bottom vignette for depth.
   &::before {
     content: '';
     position: absolute;
     inset: 0;
+    z-index: 2;
     background:
-      radial-gradient(circle at 70% 20%, rgba(255, 255, 255, 0.28), transparent 45%),
-      linear-gradient(160deg, transparent, rgba(5, 6, 13, 0.55));
+      radial-gradient(circle at 72% 16%, rgba(255, 255, 255, 0.32), transparent 42%),
+      linear-gradient(165deg, transparent 55%, rgba(5, 6, 13, 0.6));
     mix-blend-mode: screen;
+    pointer-events: none;
+  }
+
+  // Holographic light sweep travelling across the glass.
+  &::after {
+    content: '';
+    position: absolute;
+    inset: -30% -10%;
+    z-index: 3;
+    background: linear-gradient(
+      115deg,
+      transparent 38%,
+      rgba(255, 255, 255, 0.45) 48%,
+      rgba(255, 255, 255, 0.05) 54%,
+      transparent 62%
+    );
+    mix-blend-mode: overlay;
+    transform: translateX(-40%);
+    pointer-events: none;
   }
 
   &__brand {
@@ -371,17 +397,19 @@ onBeforeUnmount(() => {
     background: $gradient-brand;
   }
 
+  // Both chips float off the poster's right edge (its top-left brand and
+  // bottom-left tag stay clear).
   &--swatch {
-    top: 10%;
-    left: 0;
-    @include respond(lg) { left: -6%; }
+    top: 11%;
+    right: 4%;
+    @include respond(lg) { right: -5%; }
   }
   &--warranty {
-    bottom: 12%;
-    right: 0;
+    bottom: 13%;
+    right: 4%;
     color: $color-white;
     animation-delay: 1.2s;
-    @include respond(lg) { right: -4%; }
+    @include respond(lg) { right: -5%; }
   }
 }
 
@@ -425,11 +453,20 @@ onBeforeUnmount(() => {
       hero-in 0.85s $ease-out 0.15s both,
       hero-shimmer 7s ease-in-out 1s infinite;
   }
+
+  // Holographic glare sweeping across the poster glass.
+  .poster::after {
+    animation: holo-sweep 6.5s ease-in-out 1.6s infinite;
+  }
 }
 
 @keyframes hero-in {
   from { opacity: 0; transform: translateY(26px); }
   to { opacity: 1; transform: none; }
+}
+@keyframes holo-sweep {
+  0% { transform: translateX(-45%); }
+  55%, 100% { transform: translateX(60%); }
 }
 @keyframes hero-shimmer {
   0%, 100% { background-position: 0% 50%; }

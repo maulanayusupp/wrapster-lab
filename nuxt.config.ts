@@ -77,12 +77,9 @@ export default defineNuxtConfig({
       { code: 'en', language: 'en-US', name: 'English', file: 'en.json', dir: 'ltr' },
       { code: 'id', language: 'id-ID', name: 'Bahasa Indonesia', file: 'id.json', dir: 'ltr' },
     ],
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: 'wrapster_lang',
-      redirectOn: 'root',
-      alwaysRedirect: false,
-    },
+    // English is always the default. No browser-language auto-redirect —
+    // visitors land on EN and opt into ID via the language switcher.
+    detectBrowserLanguage: false,
   },
 
   // ---------------------------------------------------------------------------

@@ -51,6 +51,12 @@
   opacity: 1;
 }
 
+// First-access intro: hidden instantly (pre-paint) for repeat visitors and
+// reduced-motion, via the inline <head> script that sets html.intro-skip.
+.intro-skip .intro {
+  display: none !important;
+}
+
 // Film-grain overlay — subtle cinematic texture over the whole page.
 .grain {
   position: fixed;

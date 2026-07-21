@@ -4,6 +4,7 @@
 
 <template>
   <div class="layout">
+    <TheIntro />
     <AppHeader />
     <main class="layout__main">
       <slot />

@@ -60,6 +60,16 @@ export default defineNuxtConfig({
         { name: 'theme-color', content: '#070912' },
         { name: 'format-detection', content: 'telephone=no' },
       ],
+      script: [
+        {
+          // Runs before first paint: skip the intro overlay (flash-free) for
+          // repeat visitors this session or when reduced motion is preferred.
+          key: 'intro-skip',
+          tagPosition: 'head',
+          innerHTML:
+            "try{if(sessionStorage.getItem('wl_intro')||matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('intro-skip')}}catch(e){}",
+        },
+      ],
     },
   },
 

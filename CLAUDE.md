@@ -20,8 +20,12 @@ Stunning"), Cimahi. Built with **Nuxt 4** + **Vue 3** + **pure SCSS** + **i18n (
 | Icons         | Inline SVG via `AppIcon.vue` (no icon dependency)  |
 | Fonts         | Archivo (display) + Inter (body) via Google Fonts  |
 
-Run: `npm run dev` · Build: `npm run build` · Preview: `npm run preview`
+Run: `PORT=4321 npm run dev` · Build: `npm run build` · Preview: `npm run preview`
 Node ≥ 20 (Nuxt 4.5 prefers Node 22+; dev/build work on 20 with engine warnings).
+
+**Deployment:** Vercel at `https://wrapster-lab.vercel.app` (no custom domain yet).
+Base URL lives in `nuxt.config.ts` (`runtimeConfig.public.siteUrl` + `i18n.baseUrl`);
+override at deploy time with the `NUXT_PUBLIC_SITE_URL` env var when a domain is added.
 
 ---
 
@@ -78,10 +82,16 @@ so `sections/HeroSection.vue` is `<HeroSection>`. Keep filenames globally unique
 - Pure, reusable logic goes in `utils/` (auto-imported). Stateful/reactive logic
   goes in `composables/` (auto-imported). Keep components thin.
 
-### 3. SEO
+### 3. SEO & social share
 - Every page calls `useAppSeo({ title, description })` with **localized** strings.
   It emits title, OG, Twitter, canonical, hreflang alternates, and JSON-LD
   (`AutoBodyShop`). Don't hand-roll meta in pages.
+- **Share preview (WhatsApp/OG):** `og:image` is an **absolute** URL to
+  `/og-image.jpg` (compressed JPEG ~88 KB — large PNGs fail to preview on
+  WhatsApp). `useAppSeo` also sets `og:image` width/height/type/alt/secure_url
+  and `og:locale` (+ alternate). The image only renders in a real chat once the
+  site is deployed (og:image must be publicly reachable); refresh a stale cache
+  via the Facebook Sharing Debugger.
 - Global head defaults (icons, fonts, theme-color) live in `nuxt.config.ts`.
 
 ### 4. Multilingual (EN default, ID secondary)
@@ -94,10 +104,16 @@ so `sections/HeroSection.vue` is `<HeroSection>`. Keep filenames globally unique
   `i18n/locales/<code>.json`. The `LanguageSwitcher` picks it up automatically.
 - Arrays (marquee, event benefits) are read with `tm()` + `rt()`.
 
-### 5. Favicon / icons
+### 5. Favicon / icons / images
 - Source of truth is `public/favicon.svg` (gradient "W"). PNG sizes
-  (`favicon-32`, `apple-touch-icon`, `icon-192/512`) + `og-image.png` are
+  (`favicon-32`, `apple-touch-icon`, `icon-192/512`) + `og-image.png`/`.jpg` are
   generated from the SVGs. Regenerate with the recipe in `todo.md` if the mark changes.
+- **Gallery images:** `public/gallery/*.jpg` are generated gradient placeholders
+  (via PIL) so tiles render real files with no 404s — see `public/gallery/README.md`.
+  Overwrite with real photos (same filenames) to go live.
+- **Never reference a `/public` asset path that doesn't exist yet.** A missing
+  asset 404s and Nuxt's router then logs `VUE_ROUTER_R0004` for that path. Ship a
+  placeholder file (or don't emit the tag) rather than pointing at a missing file.
 
 ### 6. Maintainable & scalable
 - One responsibility per file. Sections are self-contained and composed in

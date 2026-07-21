@@ -43,7 +43,7 @@ app/
     sections/    one component per landing section (Hero, Services, …)
   composables/   useAppSeo, useReveal            (helpers, auto-imported)
   plugins/       reveal.ts (v-reveal / v-reveal.wipe), spotlight.ts (v-spotlight),
-                 magnetic.ts (v-magnetic buttons)
+                 magnetic.ts (v-magnetic), parallax.ts (v-parallax scroll drift)
   services/      content.service.ts + types.ts   (the data boundary)
   utils/         constants.ts, format.ts         (pure helpers, auto-imported)
   layouts/       default.vue
@@ -145,7 +145,13 @@ so `sections/HeroSection.vue` is `<HeroSection>`. Keep filenames globally unique
   - Count-up stat numbers on scroll-in; `v-reveal.wipe` clip-path section headings.
   - Fixed film-grain overlay (`.grain`) + top `.scroll-progress` bar.
   - Sunmori partner marquee (text wordmarks — not logo artwork).
+  - Glass + holographic hero poster; `v-parallax` scroll-drift on decorative
+    glow orbs (Process/Colors/Event) for depth between sections.
+  - Card depth via `card-depth` / `card-depth-hover` mixins.
   Keep flourishes tasteful and cohesive — "premium lab", not carnival.
+- **Count-up / progressive enhancement rule:** interactive numbers (stats) render
+  their REAL values in SSR; JS only resets-and-animates them under motion. Never
+  let an enhancement leave placeholder/zero content for no-JS or crawlers.
 
 ---
 

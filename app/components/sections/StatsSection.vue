@@ -15,17 +15,15 @@ function parse(value: string) {
 }
 
 const parsed = stats.map((s) => ({ ...s, ...parse(s.value) }))
-// Start every counter at zero; the observer animates them to target on scroll-in.
-const display = reactive(parsed.map(() => '0'))
+const finalValue = (p: (typeof parsed)[number]) => p.target.toFixed(p.decimals)
+
+// Baseline = the REAL numbers, so SSR / no-JS / reduced-motion always show them.
+// The count-up is a pure enhancement that resets to 0 and ticks up on scroll-in.
+const display = reactive(parsed.map(finalValue))
 const root = ref<HTMLElement | null>(null)
 
 function animate() {
-  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
   parsed.forEach((p, i) => {
-    if (reduced) {
-      display[i] = p.target.toFixed(p.decimals)
-      return
-    }
     const duration = 1500
     const start = performance.now()
     const tick = (now: number) => {
@@ -33,17 +31,17 @@ function animate() {
       const eased = 1 - Math.pow(1 - t2, 3) // easeOutCubic
       display[i] = (p.target * eased).toFixed(p.decimals)
       if (t2 < 1) requestAnimationFrame(tick)
-      else display[i] = p.target.toFixed(p.decimals)
+      else display[i] = finalValue(p)
     }
     requestAnimationFrame(tick)
   })
 }
 
 onMounted(() => {
-  if (!root.value || typeof IntersectionObserver === 'undefined') {
-    parsed.forEach((p, i) => (display[i] = p.target.toFixed(p.decimals)))
-    return
-  }
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  if (reduced || !root.value || typeof IntersectionObserver === 'undefined') return
+
+  parsed.forEach((p, i) => (display[i] = (0).toFixed(p.decimals)))
   const observer = new IntersectionObserver(
     (entries, obs) => {
       for (const entry of entries) {

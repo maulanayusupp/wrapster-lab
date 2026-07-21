@@ -16,7 +16,7 @@ const benefits = computed(() => (tm('event.benefits') as unknown[]).map((m) => r
   <section :id="SECTION_IDS.event" class="event">
     <div class="u-container">
       <div v-reveal class="event__card">
-        <div class="event__glow" aria-hidden="true" />
+        <div v-parallax="0.2" class="event__glow" aria-hidden="true" />
 
         <div class="event__main">
           <span class="u-kicker event__kicker">

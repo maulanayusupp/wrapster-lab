@@ -9,6 +9,7 @@ const steps = contentService.getProcess()
 
 <template>
   <section :id="SECTION_IDS.process" class="process">
+    <span v-parallax="0.16" class="process__orb" aria-hidden="true" />
     <div class="u-container">
       <SectionHeading
         :kicker="t('process.kicker')"
@@ -37,9 +38,29 @@ const steps = contentService.getProcess()
 
 <style scoped lang="scss">
 .process {
+  position: relative;
+  overflow: hidden;
   @include section-space;
   background:
     radial-gradient(ellipse 60% 50% at 50% 0%, rgba(47, 92, 255, 0.08), transparent 70%);
+
+  &__orb {
+    position: absolute;
+    top: -10%;
+    right: -5%;
+    width: min(40vw, 480px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(47, 92, 255, 0.28), transparent 68%);
+    filter: blur(50px);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  > .u-container {
+    position: relative;
+    z-index: 1;
+  }
 
   &__track {
     display: grid;

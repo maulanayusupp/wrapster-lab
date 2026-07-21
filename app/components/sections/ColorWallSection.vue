@@ -25,6 +25,7 @@ onMounted(() => {
 
 <template>
   <section :id="SECTION_IDS.colors" class="colors">
+    <span v-parallax="0.14" class="colors__orb" aria-hidden="true" />
     <div class="u-container">
       <SectionHeading
         :kicker="t('colors.kicker')"
@@ -57,8 +58,28 @@ onMounted(() => {
 
 <style scoped lang="scss">
 .colors {
+  position: relative;
+  overflow: hidden;
   @include section-space;
   background: radial-gradient(ellipse 70% 60% at 50% 100%, rgba(43, 140, 255, 0.08), transparent 70%);
+
+  &__orb {
+    position: absolute;
+    bottom: -12%;
+    left: -6%;
+    width: min(42vw, 520px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(91, 108, 255, 0.26), transparent 68%);
+    filter: blur(55px);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  > .u-container {
+    position: relative;
+    z-index: 1;
+  }
 
   &__wall {
     display: grid;

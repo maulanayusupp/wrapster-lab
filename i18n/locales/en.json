@@ -7,6 +7,10 @@
     "showcase": {
       "title": "Build Gallery — Showcase",
       "desc": "A curated archive of Wrapster Lab builds — custom concepts, street styles, race liveries and adventure wraps. One of one, every time."
+    },
+    "contact": {
+      "title": "Contact — Book Your Wrap",
+      "desc": "Talk to Wrapster Lab. Free consultation, fast reply, nationwide service. Tell us your ride and let's turn it from stock to stunning."
     }
   },
   "nav": {
@@ -16,9 +20,56 @@
     "why": "Why Us",
     "community": "Community",
     "showcase": "Showcase",
+    "contact": "Contact",
     "book": "Book a Wrap",
     "menu": "Menu",
     "close": "Close"
+  },
+  "contactPage": {
+    "kicker": "Let's talk",
+    "title": "Let's build something worth staring at",
+    "lead": "Tell us your ride and the vibe you're chasing. Free consultation, honest advice, zero pressure — just a crew obsessed with making your machine one of one.",
+    "response": "We usually reply within a few hours.",
+    "reassure": {
+      "consult": "Free concept consultation",
+      "fast": "Reply within hours",
+      "warranty": "Warranty-backed work",
+      "nationwide": "Nationwide — no drop-off needed"
+    },
+    "form": {
+      "title": "Start your build",
+      "name": "Your name",
+      "namePlaceholder": "e.g. Rangga",
+      "phone": "WhatsApp number",
+      "phonePlaceholder": "e.g. 0812 3456 7890",
+      "vehicle": "Your vehicle",
+      "vehiclePlaceholder": "e.g. Yamaha NMAX 2023",
+      "message": "Your idea / concept",
+      "messagePlaceholder": "Tell us the look you want — colors, theme, references…",
+      "submit": "Send via WhatsApp",
+      "note": "No account or sign-up needed — this opens WhatsApp with your details prefilled.",
+      "waIntro": "Hi Wrapster Lab! I'd like to start a wrap build."
+    },
+    "channels": {
+      "title": "Prefer to reach us directly?",
+      "lead": "Pick whatever's easiest — we're friendly and fast."
+    },
+    "faq": {
+      "title": "Good questions, honest answers",
+      "q1": "How long does a wrap take?",
+      "a1": "Most motorcycle builds finish in 2–4 days depending on complexity. You'll get a clear timeline at consultation.",
+      "q2": "Do I have to bring my bike in?",
+      "a2": "Not at all. Ship us your body panels, or we ship the printed sticker to you — anywhere in Indonesia.",
+      "q3": "Will it damage my original paint?",
+      "a3": "No. Premium films are removable and actually protect the paint underneath when installed and removed properly.",
+      "q4": "Can you print a fully custom design?",
+      "a4": "If you can dream it, we can print it — characters, racing liveries, or a concept designed from scratch with you."
+    },
+    "cta": {
+      "title": "Your ride's glow-up starts with hello",
+      "subtitle": "Send a message — it takes 30 seconds, and there's zero obligation.",
+      "button": "Chat on WhatsApp"
+    }
   },
   "showcase": {
     "kicker": "The lab archive",

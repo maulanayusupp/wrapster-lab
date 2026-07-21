@@ -3,7 +3,7 @@
  * AppHeader — sticky top nav with scroll-aware background, in-page anchor
  * links, language switcher, and an accessible mobile drawer.
  */
-import { NAV_LINKS, SECTION_IDS } from '~/utils/constants'
+import { NAV_LINKS } from '~/utils/constants'
 
 const localePath = useLocalePath()
 const scrolled = ref(false)
@@ -12,6 +12,7 @@ const progress = ref<HTMLElement | null>(null)
 
 const home = computed(() => localePath('/'))
 const showcase = computed(() => localePath('/showcase'))
+const contact = computed(() => localePath('/contact'))
 
 function onScroll() {
   scrolled.value = window.scrollY > 24
@@ -60,11 +61,12 @@ onBeforeUnmount(() => {
           {{ $t(link.key) }}
         </NuxtLink>
         <NuxtLink :to="showcase" class="header__link">{{ $t('nav.showcase') }}</NuxtLink>
+        <NuxtLink :to="contact" class="header__link">{{ $t('nav.contact') }}</NuxtLink>
       </nav>
 
       <div class="header__actions">
         <LanguageSwitcher />
-        <BaseButton v-magnetic :to="`${home}#${SECTION_IDS.contact}`" size="md" class="header__cta">
+        <BaseButton v-magnetic :to="contact" size="md" class="header__cta">
           {{ $t('nav.book') }}
         </BaseButton>
         <button
@@ -94,8 +96,11 @@ onBeforeUnmount(() => {
           <NuxtLink :to="showcase" class="drawer__link" @click="closeMenu">
             {{ $t('nav.showcase') }}
           </NuxtLink>
+          <NuxtLink :to="contact" class="drawer__link" @click="closeMenu">
+            {{ $t('nav.contact') }}
+          </NuxtLink>
         </nav>
-        <BaseButton :to="`${home}#${SECTION_IDS.contact}`" size="lg" block @click="closeMenu">
+        <BaseButton :to="contact" size="lg" block @click="closeMenu">
           {{ $t('nav.book') }}
         </BaseButton>
       </div>

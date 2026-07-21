@@ -7,6 +7,10 @@
     "showcase": {
       "title": "Galeri Build — Showcase",
       "desc": "Arsip pilihan hasil build Wrapster Lab — konsep custom, gaya jalanan, livery balap, dan wrap adventure. Selalu satu-satunya di dunia."
+    },
+    "contact": {
+      "title": "Kontak — Pesan Wrapping",
+      "desc": "Hubungi Wrapster Lab. Konsultasi gratis, balas cepat, layanan nasional. Ceritakan tunggangannya dan mari ubah dari standar jadi memukau."
     }
   },
   "nav": {
@@ -16,9 +20,56 @@
     "why": "Kenapa Kami",
     "community": "Komunitas",
     "showcase": "Showcase",
+    "contact": "Kontak",
     "book": "Pesan Sekarang",
     "menu": "Menu",
     "close": "Tutup"
+  },
+  "contactPage": {
+    "kicker": "Ngobrol yuk",
+    "title": "Yuk bikin sesuatu yang bikin orang nengok",
+    "lead": "Ceritakan tunggangan dan gaya yang kamu incar. Konsultasi gratis, saran jujur, tanpa paksaan — tim kami cuma satu obsesinya: bikin motormu satu-satunya di dunia.",
+    "response": "Biasanya kami balas dalam beberapa jam.",
+    "reassure": {
+      "consult": "Konsultasi konsep gratis",
+      "fast": "Balas dalam hitungan jam",
+      "warranty": "Pengerjaan bergaransi",
+      "nationwide": "Se-Nusantara — tanpa antar motor"
+    },
+    "form": {
+      "title": "Mulai build kamu",
+      "name": "Nama kamu",
+      "namePlaceholder": "mis. Rangga",
+      "phone": "Nomor WhatsApp",
+      "phonePlaceholder": "mis. 0812 3456 7890",
+      "vehicle": "Kendaraan kamu",
+      "vehiclePlaceholder": "mis. Yamaha NMAX 2023",
+      "message": "Ide / konsep kamu",
+      "messagePlaceholder": "Ceritakan tampilan yang kamu mau — warna, tema, referensi…",
+      "submit": "Kirim via WhatsApp",
+      "note": "Tanpa akun atau daftar — ini membuka WhatsApp dengan detailmu sudah terisi.",
+      "waIntro": "Halo Wrapster Lab! Saya mau mulai wrapping."
+    },
+    "channels": {
+      "title": "Mau hubungi langsung?",
+      "lead": "Pilih yang paling gampang — kami ramah dan cepat."
+    },
+    "faq": {
+      "title": "Pertanyaan bagus, jawaban jujur",
+      "q1": "Berapa lama proses wrapping?",
+      "a1": "Kebanyakan build motor selesai 2–4 hari tergantung kerumitan. Kamu dapat estimasi jelas saat konsultasi.",
+      "q2": "Harus bawa motor ke tempat?",
+      "a2": "Tidak harus. Kirim panel body-mu ke kami, atau kami kirim stikernya ke kamu — ke seluruh Indonesia.",
+      "q3": "Apakah merusak cat asli?",
+      "a3": "Tidak. Film premium bisa dilepas dan justru melindungi cat di baliknya bila dipasang & dilepas dengan benar.",
+      "q4": "Bisa cetak desain full custom?",
+      "a4": "Kalau bisa kamu bayangkan, kami bisa cetak — karakter, livery balap, atau konsep dirancang dari nol bareng kamu."
+    },
+    "cta": {
+      "title": "Glow-up tunggangamu dimulai dari sapaan",
+      "subtitle": "Kirim pesan — cuma 30 detik, dan tanpa kewajiban apa pun.",
+      "button": "Chat via WhatsApp"
+    }
   },
   "showcase": {
     "kicker": "Arsip lab",

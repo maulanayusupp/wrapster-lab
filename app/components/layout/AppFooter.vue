@@ -1,6 +1,6 @@
 <script setup lang="ts">
 /** AppFooter — brand, quick links, contact channels, and legal line. */
-import { NAV_LINKS, SECTION_IDS } from '~/utils/constants'
+import { NAV_LINKS } from '~/utils/constants'
 import { whatsappLink } from '~/utils/format'
 
 const appConfig = useAppConfig()
@@ -8,6 +8,7 @@ const { t } = useI18n()
 const localePath = useLocalePath()
 const home = computed(() => localePath('/'))
 const showcase = computed(() => localePath('/showcase'))
+const contact = computed(() => localePath('/contact'))
 
 const year = new Date().getFullYear()
 const waHref = computed(() => whatsappLink(appConfig.contact.phoneIntl, t('contact.waMessage')))
@@ -44,6 +45,7 @@ const mapsHref = computed(() => appConfig.contact.maps)
           {{ $t(link.key) }}
         </NuxtLink>
         <NuxtLink :to="showcase" class="footer__link">{{ $t('nav.showcase') }}</NuxtLink>
+        <NuxtLink :to="contact" class="footer__link">{{ $t('nav.contact') }}</NuxtLink>
       </nav>
 
       <div class="footer__col">
@@ -60,7 +62,7 @@ const mapsHref = computed(() => appConfig.contact.maps)
         <a :href="mapsHref" target="_blank" rel="noopener" class="footer__link footer__link--wrap">
           {{ appConfig.contact.address }}
         </a>
-        <BaseButton :href="`#${SECTION_IDS.contact}`" variant="outline" class="footer__cta">
+        <BaseButton :to="contact" variant="outline" class="footer__cta">
           {{ $t('nav.book') }}
         </BaseButton>
       </div>

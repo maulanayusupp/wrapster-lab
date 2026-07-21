@@ -60,7 +60,8 @@ const features = contentService.getFeatures()
   border-radius: $radius-lg;
   border: 1px solid var(--c-line);
   background: linear-gradient(180deg, var(--c-surface), transparent);
-  transition: border-color $dur-base, transform $dur-base $ease-out;
+  @include card-depth;
+  transition: border-color $dur-base, transform $dur-base $ease-out, box-shadow $dur-base;
 
   // Keep content above the injected cursor-spotlight layer.
   & > *:not(.spotlight-layer) {
@@ -71,6 +72,7 @@ const features = contentService.getFeatures()
   &:hover {
     transform: translateY(-4px);
     border-color: rgba(255, 106, 43, 0.4);
+    @include card-depth-hover;
     .feature__icon { color: $color-white; background: $gradient-heat; border-color: transparent; }
   }
 

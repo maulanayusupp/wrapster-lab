@@ -60,7 +60,9 @@ const services = contentService.getServices()
   background: var(--c-surface);
   border: 1px solid var(--c-line);
   overflow: hidden;
-  transition: transform $dur-base $ease-out, border-color $dur-base, background $dur-base;
+  @include card-depth;
+  transition: transform $dur-base $ease-out, border-color $dur-base,
+    background $dur-base, box-shadow $dur-base;
 
   &::before {
     content: '';
@@ -74,6 +76,7 @@ const services = contentService.getServices()
   &:hover {
     transform: translateY(-6px);
     border-color: rgba(43, 140, 255, 0.5);
+    @include card-depth-hover;
     &::before { opacity: 1; }
   }
 

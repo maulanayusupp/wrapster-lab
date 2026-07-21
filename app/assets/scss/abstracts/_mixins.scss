@@ -94,6 +94,21 @@ $breakpoints: (
   }
 }
 
+/// Card depth — subtle top gloss + layered drop shadow (rest state).
+@mixin card-depth {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 18px 40px -26px rgba(0, 0, 0, 0.75);
+}
+
+/// Card depth — elevated hover state with a faint brand rim.
+@mixin card-depth-hover {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.09),
+    0 34px 64px -30px rgba(0, 0, 0, 0.9),
+    0 0 0 1px rgba(47, 92, 255, 0.18);
+}
+
 /// Accessible focus ring.
 @mixin focus-ring($color: $color-blue) {
   outline: 2px solid $color;

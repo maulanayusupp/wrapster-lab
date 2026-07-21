@@ -60,13 +60,15 @@ const steps = contentService.getProcess()
   border-radius: $radius-lg;
   background: var(--c-surface);
   border: 1px solid var(--c-line);
-  transition: transform $dur-base $ease-out, border-color $dur-base;
+  @include card-depth;
+  transition: transform $dur-base $ease-out, border-color $dur-base, box-shadow $dur-base;
 
   @include respond(lg) { flex-direction: column; }
 
   &:hover {
     transform: translateY(-4px);
     border-color: rgba(47, 92, 255, 0.5);
+    @include card-depth-hover;
   }
 
   // Connector line (desktop only).

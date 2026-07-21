@@ -117,7 +117,8 @@ const mapsHref = computed(() => appConfig.contact.maps)
   border-radius: $radius-lg;
   background: var(--c-surface);
   border: 1px solid var(--c-line);
-  transition: transform $dur-base $ease-out, border-color $dur-base;
+  @include card-depth;
+  transition: transform $dur-base $ease-out, border-color $dur-base, box-shadow $dur-base;
 
   & > *:not(.spotlight-layer) {
     position: relative;
@@ -127,6 +128,7 @@ const mapsHref = computed(() => appConfig.contact.maps)
   &:hover {
     transform: translateY(-5px);
     border-color: rgba(47, 92, 255, 0.5);
+    @include card-depth-hover;
     .ccard__icon { background: $gradient-cool; color: $color-white; border-color: transparent; }
   }
 

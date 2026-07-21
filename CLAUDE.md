@@ -42,7 +42,8 @@ app/
     layout/      AppHeader, AppFooter, LanguageSwitcher, TheLogo
     sections/    one component per landing section (Hero, Services, …)
   composables/   useAppSeo, useReveal            (helpers, auto-imported)
-  plugins/       reveal.ts (v-reveal), spotlight.ts (v-spotlight cursor glow)
+  plugins/       reveal.ts (v-reveal / v-reveal.wipe), spotlight.ts (v-spotlight),
+                 magnetic.ts (v-magnetic buttons)
   services/      content.service.ts + types.ts   (the data boundary)
   utils/         constants.ts, format.ts         (pure helpers, auto-imported)
   layouts/       default.vue
@@ -133,12 +134,18 @@ so `sections/HeroSection.vue` is `<HeroSection>`. Keep filenames globally unique
   (adds `.reveal-on` to `<html>` before hiding-then-animating).
 - Everything responsive via fluid `clamp()` type and mixin breakpoints
   (`@include respond(md)`). Mobile drawer nav below `lg`.
-- **Signature interactions (all motion-safe / disabled under reduced motion):**
-  cinematic staggered hero entrance + gradient shimmer on "STUNNING";
-  `v-spotlight` cursor-follow glow on cards (glow layer `z-index:0`, host content
-  lifted to `z-index:1`); count-up stat numbers on scroll-in; a fixed film-grain
-  overlay (`.grain`) and top `.scroll-progress` bar. Keep new flourishes tasteful
-  and cohesive — the bar is "premium lab", not carnival.
+- **Signature interactions (all motion-safe / disabled under reduced motion,
+  and off on coarse/touch pointers where cursor-based):**
+  - Branded first-access intro (`TheIntro`, once per session, flash-free via the
+    inline `intro-skip` head script).
+  - Cinematic staggered hero entrance + gradient shimmer on "STUNNING".
+  - Hero poster **parallax**: 3D tilt toward cursor (`--rx/--ry`) + scroll drift (`--sy`).
+  - **Magnetic** CTAs (`v-magnetic` → CSS `translate`, composes with `:active` scale).
+  - `v-spotlight` cursor-follow glow on cards (glow layer `z-index:0`, content `z-index:1`).
+  - Count-up stat numbers on scroll-in; `v-reveal.wipe` clip-path section headings.
+  - Fixed film-grain overlay (`.grain`) + top `.scroll-progress` bar.
+  - Sunmori partner marquee (text wordmarks — not logo artwork).
+  Keep flourishes tasteful and cohesive — "premium lab", not carnival.
 
 ---
 

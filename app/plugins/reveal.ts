@@ -25,6 +25,8 @@ export default defineNuxtPlugin((nuxtApp) => {
     // Runs client-side only — safe to touch window/IntersectionObserver here.
     mounted(el: RevealEl, binding) {
       el.classList.add('reveal')
+      // `v-reveal.wipe` → cinematic left-to-right clip-path wipe instead of fade-up.
+      if (binding.modifiers.wipe) el.classList.add('reveal--wipe')
 
       const delay = Number(binding.value) || 0
       if (delay) el.style.transitionDelay = `${delay}ms`

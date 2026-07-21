@@ -40,6 +40,11 @@ of an improvement, add it here (per the rules in `CLAUDE.md`).
 - [x] Wow-factor pass: staggered hero entrance + gradient shimmer, `v-spotlight`
       cursor glow on cards, count-up stats, film-grain overlay, scroll-progress
       bar. All disabled under `prefers-reduced-motion`.
+- [x] First-access branded intro overlay (once/session, flash-free).
+- [x] Hero poster parallax (3D tilt on mouse + scroll drift).
+- [x] Magnetic CTA buttons (`v-magnetic`).
+- [x] Sunmori partner marquee (text wordmarks — replace with licensed logos if available).
+- [x] Cinematic `v-reveal.wipe` clip-path reveal on section headings.
 
 ## Polish — next
 - [ ] Add `@nuxt/fonts` to self-host Archivo/Inter (drop Google Fonts request,

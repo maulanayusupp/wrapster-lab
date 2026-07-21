@@ -97,6 +97,24 @@ export const contentService = {
     ]
   },
 
+  /**
+   * Sunmori event partners — rendered as plain text wordmarks (factual event
+   * attribution, not logo artwork). Replace with official logos only if you
+   * have the rights to use them.
+   */
+  getPartners(): string[] {
+    return [
+      'KFC',
+      'Tracker',
+      'RideON',
+      'MyOtto',
+      'Incleen Autocare',
+      'Badjoe Studio',
+      'Halowallo',
+      'Hayaidesu',
+    ]
+  },
+
   getEvent(): CommunityEvent {
     return {
       id: 'sunmori-2026-07',

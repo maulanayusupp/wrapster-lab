@@ -47,6 +47,8 @@ const benefits = computed(() => (tm('event.benefits') as unknown[]).map((m) => r
           </li>
         </ul>
       </div>
+
+      <PartnerMarquee />
     </div>
   </section>
 </template>

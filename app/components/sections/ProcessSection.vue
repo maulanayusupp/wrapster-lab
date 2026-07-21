@@ -39,7 +39,7 @@ const steps = contentService.getProcess()
 .process {
   @include section-space;
   background:
-    radial-gradient(ellipse 60% 50% at 50% 0%, rgba(43, 107, 255, 0.08), transparent 70%);
+    radial-gradient(ellipse 60% 50% at 50% 0%, rgba(47, 92, 255, 0.08), transparent 70%);
 
   &__track {
     display: grid;
@@ -66,7 +66,7 @@ const steps = contentService.getProcess()
 
   &:hover {
     transform: translateY(-4px);
-    border-color: rgba(43, 107, 255, 0.5);
+    border-color: rgba(47, 92, 255, 0.5);
   }
 
   // Connector line (desktop only).

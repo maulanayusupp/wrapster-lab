@@ -104,8 +104,8 @@ const activeModel = computed(() => posterModels[activeIndex.value])
     position: absolute;
     inset: 0;
     background-image:
-      linear-gradient(rgba(124, 58, 237, 0.06) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(43, 107, 255, 0.06) 1px, transparent 1px);
+      linear-gradient(rgba(47, 92, 255, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(47, 92, 255, 0.06) 1px, transparent 1px);
     background-size: 60px 60px;
     mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, #000 30%, transparent 100%);
   }
@@ -186,7 +186,7 @@ const activeModel = computed(() => posterModels[activeIndex.value])
       -webkit-text-stroke: 1px rgba(255, 255, 255, 0.25);
     }
     &-stunning {
-      filter: drop-shadow(0 6px 30px rgba(255, 45, 120, 0.35));
+      filter: drop-shadow(0 6px 30px rgba(47, 92, 255, 0.35));
     }
   }
 

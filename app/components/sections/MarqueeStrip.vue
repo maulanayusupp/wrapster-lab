@@ -27,7 +27,7 @@ const loop = computed(() => [...items.value, ...items.value])
   overflow: hidden;
   padding-block: $space-md;
   border-block: 1px solid var(--c-line);
-  background: linear-gradient(90deg, rgba(124, 58, 237, 0.06), rgba(43, 107, 255, 0.06));
+  background: linear-gradient(90deg, rgba(47, 92, 255, 0.06), rgba(47, 92, 255, 0.06));
   mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
 
   &__track {

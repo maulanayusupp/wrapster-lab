@@ -15,13 +15,18 @@ $color-white:        #f5f7ff;
 $color-mist:         #b8c0e0; // secondary text
 $color-muted:        #7b83a8; // tertiary text
 
-// Signature "profile ring" gradient stops (orange → pink → purple → blue)
-$color-orange:       #ff5a1f;
-$color-magenta:      #ff2d78;
-$color-purple:       #7c3aed;
-$color-violet:       #a855f7;
-$color-blue:         #2b6bff;
-$color-cyan:         #22d3ee;
+// Brand-accurate palette: the logo is a deep ROYAL BLUE with an ORANGE accent.
+// The theme is blue-dominant (royal blue → azure → cyan); orange is the spark
+// used sparingly for accents. (Some names are legacy — kept stable so component
+// references don't churn — but every value below sits in the blue/azure family
+// except $color-orange, the accent.)
+$color-navy:         #1e2597; // deepest logo blue (tiles / og)
+$color-blue:         #2f5cff; // PRIMARY royal blue — the star
+$color-magenta:      #2b8cff; // azure (bright blue)
+$color-violet:       #5b6cff; // periwinkle / indigo-blue
+$color-purple:       #3f4fd6; // deep indigo
+$color-cyan:         #22d3ee; // cyan highlight
+$color-orange:       #ff6a2b; // ACCENT spark (logo "W" + tagline)
 
 $color-primary:      $color-blue;
 $color-accent:       $color-orange;
@@ -30,10 +35,11 @@ $color-success:      #22c55e;
 $color-warning:      #fbbf24;
 
 // --- Gradients ---------------------------------------------------------------
-$gradient-brand:  linear-gradient(100deg, #{$color-orange} 0%, #{$color-magenta} 34%, #{$color-purple} 66%, #{$color-blue} 100%);
-$gradient-ring:   conic-gradient(from 210deg, #{$color-orange}, #{$color-magenta}, #{$color-violet}, #{$color-blue}, #{$color-orange});
-$gradient-heat:   linear-gradient(120deg, #{$color-orange}, #{$color-magenta});
-$gradient-cool:   linear-gradient(120deg, #{$color-blue}, #{$color-violet});
+// Signature gradient is now a blue spectrum: indigo → royal → azure → cyan.
+$gradient-brand:  linear-gradient(105deg, #{$color-purple} 0%, #{$color-blue} 42%, #{$color-magenta} 74%, #{$color-cyan} 100%);
+$gradient-ring:   conic-gradient(from 210deg, #{$color-blue}, #{$color-magenta}, #{$color-cyan}, #{$color-violet}, #{$color-blue});
+$gradient-heat:   linear-gradient(120deg, #{$color-orange}, #ff9440); // orange accent
+$gradient-cool:   linear-gradient(120deg, #{$color-blue}, #{$color-cyan});
 $gradient-fade:   linear-gradient(180deg, rgba(7, 9, 18, 0) 0%, #{$color-void} 100%);
 
 // --- Typography --------------------------------------------------------------
@@ -77,7 +83,7 @@ $radius-pill: 999px;
 // --- Elevation ---------------------------------------------------------------
 $shadow-sm:   0 2px 8px rgba(0, 0, 0, 0.35);
 $shadow-md:   0 12px 40px rgba(0, 0, 0, 0.45);
-$shadow-glow: 0 0 40px rgba(124, 58, 237, 0.35);
+$shadow-glow: 0 0 40px rgba(47, 92, 255, 0.35);
 
 // --- Motion ------------------------------------------------------------------
 $ease-out:    cubic-bezier(0.16, 1, 0.3, 1);

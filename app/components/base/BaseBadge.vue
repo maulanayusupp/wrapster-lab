@@ -32,14 +32,14 @@ withDefaults(defineProps<Props>(), { dot: false })
     height: 7px;
     border-radius: 50%;
     background: $color-orange;
-    box-shadow: 0 0 0 0 rgba(255, 90, 31, 0.6);
+    box-shadow: 0 0 0 0 rgba(255, 106, 43, 0.6);
     animation: badge-pulse 2s infinite;
   }
 }
 
 @keyframes badge-pulse {
-  0% { box-shadow: 0 0 0 0 rgba(255, 90, 31, 0.55); }
-  70% { box-shadow: 0 0 0 8px rgba(255, 90, 31, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(255, 90, 31, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(255, 106, 43, 0.55); }
+  70% { box-shadow: 0 0 0 8px rgba(255, 106, 43, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 106, 43, 0); }
 }
 </style>

@@ -29,7 +29,7 @@ const appConfig = useAppConfig()
     font-size: 1.25rem;
     color: $color-white;
     background: $gradient-brand;
-    box-shadow: 0 4px 16px rgba(255, 45, 120, 0.4);
+    box-shadow: 0 4px 16px rgba(47, 92, 255, 0.4);
     transform: skewX(-6deg);
   }
 

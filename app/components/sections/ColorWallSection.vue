@@ -58,7 +58,7 @@ onMounted(() => {
 <style scoped lang="scss">
 .colors {
   @include section-space;
-  background: radial-gradient(ellipse 70% 60% at 50% 100%, rgba(168, 85, 247, 0.08), transparent 70%);
+  background: radial-gradient(ellipse 70% 60% at 50% 100%, rgba(43, 140, 255, 0.08), transparent 70%);
 
   &__wall {
     display: grid;

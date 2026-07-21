@@ -39,7 +39,7 @@ function goHome() {
     position: absolute;
     width: 60vw;
     height: 60vw;
-    background: radial-gradient(circle, rgba(255, 45, 120, 0.25), transparent 70%);
+    background: radial-gradient(circle, rgba(47, 92, 255, 0.25), transparent 70%);
     filter: blur(60px);
   }
 

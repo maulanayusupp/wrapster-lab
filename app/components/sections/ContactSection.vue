@@ -119,7 +119,7 @@ const mapsHref = computed(() => appConfig.contact.maps)
 
   &:hover {
     transform: translateY(-5px);
-    border-color: rgba(43, 107, 255, 0.5);
+    border-color: rgba(47, 92, 255, 0.5);
     .ccard__icon { background: $gradient-cool; color: $color-white; border-color: transparent; }
   }
 
@@ -131,7 +131,7 @@ const mapsHref = computed(() => appConfig.contact.maps)
     margin-bottom: $space-xs;
     border-radius: $radius-md;
     color: $color-blue;
-    background: rgba(43, 107, 255, 0.1);
+    background: rgba(47, 92, 255, 0.1);
     border: 1px solid var(--c-line);
     transition: color $dur-base, background $dur-base, border-color $dur-base;
   }

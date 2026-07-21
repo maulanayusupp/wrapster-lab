@@ -74,7 +74,7 @@ const benefits = computed(() => (tm('event.benefits') as unknown[]).map((m) => r
     right: -10%;
     width: 40%;
     height: 120%;
-    background: radial-gradient(circle, rgba(255, 45, 120, 0.35), transparent 65%);
+    background: radial-gradient(circle, rgba(47, 92, 255, 0.35), transparent 65%);
     filter: blur(50px);
   }
 

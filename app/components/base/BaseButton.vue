@@ -92,11 +92,11 @@ const extraAttrs = computed(() => {
     background: $gradient-brand;
     background-size: 180% 180%;
     background-position: 0% 50%;
-    box-shadow: 0 8px 30px rgba(255, 45, 120, 0.35);
+    box-shadow: 0 8px 30px rgba(47, 92, 255, 0.35);
 
     &:hover {
       background-position: 100% 50%;
-      box-shadow: 0 10px 40px rgba(124, 58, 237, 0.5);
+      box-shadow: 0 10px 40px rgba(47, 92, 255, 0.5);
     }
   }
 

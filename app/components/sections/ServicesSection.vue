@@ -66,14 +66,14 @@ const services = contentService.getServices()
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 100% 0%, rgba(124, 58, 237, 0.16), transparent 55%);
+    background: radial-gradient(circle at 100% 0%, rgba(47, 92, 255, 0.16), transparent 55%);
     opacity: 0;
     transition: opacity $dur-base $ease-out;
   }
 
   &:hover {
     transform: translateY(-6px);
-    border-color: rgba(168, 85, 247, 0.5);
+    border-color: rgba(43, 140, 255, 0.5);
     &::before { opacity: 1; }
   }
 

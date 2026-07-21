@@ -60,7 +60,7 @@ const testimonials = contentService.getTestimonials()
   border: 1px solid var(--c-line);
   transition: transform $dur-base $ease-out, border-color $dur-base;
 
-  &:hover { transform: translateY(-4px); border-color: rgba(168, 85, 247, 0.4); }
+  &:hover { transform: translateY(-4px); border-color: rgba(43, 140, 255, 0.4); }
 
   &__mark { color: $color-purple; opacity: 0.7; }
 

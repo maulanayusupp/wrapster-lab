@@ -123,7 +123,11 @@ so `sections/HeroSection.vue` is `<HeroSection>`. Keep filenames globally unique
 - TypeScript types for all service data live in `services/types.ts`.
 
 ### 7. UI/UX
-- Dark, neon "lab" theme; signature gradient = orange→magenta→purple→blue.
+- Dark, neon "lab" theme built around the **real logo**: deep **royal blue** with
+  an **orange** accent spark. Signature gradient is blue-forward
+  (indigo → royal → azure → cyan); orange (`$color-orange`) is used sparingly for
+  accents (badge dot, ".lab" suffix, kicker underlines). Palette lives in
+  `abstracts/_variables.scss` — some token names are legacy but values are blue.
 - Respect `prefers-reduced-motion` (reveal + reset already do).
 - Content is visible without JS; `v-reveal` is progressive enhancement only
   (adds `.reveal-on` to `<html>` before hiding-then-animating).

@@ -61,7 +61,7 @@ const features = contentService.getFeatures()
 
   &:hover {
     transform: translateY(-4px);
-    border-color: rgba(255, 90, 31, 0.4);
+    border-color: rgba(255, 106, 43, 0.4);
     .feature__icon { color: $color-white; background: $gradient-heat; border-color: transparent; }
   }
 
@@ -73,7 +73,7 @@ const features = contentService.getFeatures()
     height: 48px;
     border-radius: $radius-md;
     color: $color-orange;
-    background: rgba(255, 90, 31, 0.08);
+    background: rgba(255, 106, 43, 0.08);
     border: 1px solid var(--c-line);
     transition: color $dur-base, background $dur-base, border-color $dur-base;
   }

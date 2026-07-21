@@ -1,9 +1,10 @@
 <script setup lang="ts">
 /**
  * GallerySection — poster-style showcase echoing the brand's IG grid.
- * Uses CSS-composed "build posters" (bold model word on a themed gradient) as
- * a stand-in until real project photography is dropped into /public/gallery.
- * See todo.md — swap the `.poster` background for <NuxtImg> when assets land.
+ * Each tile renders a real photo from /public/gallery/ over its themed gradient.
+ * Missing/broken photos fall back to the gradient poster automatically, so the
+ * section always looks intentional even before portfolio images are added.
+ * Filenames are defined in content.service.ts → getGallery().
  */
 import { SECTION_IDS } from '~/utils/constants'
 import { contentService } from '~/services/content.service'
@@ -11,6 +12,11 @@ import { contentService } from '~/services/content.service'
 const { t } = useI18n()
 const appConfig = useAppConfig()
 const items = contentService.getGallery()
+
+// Track photos that fail to load so the gradient poster shows through instead
+// of a broken image (e.g. before real portfolio files are added).
+const failed = reactive(new Set<string>())
+
 </script>
 
 <template>
@@ -36,6 +42,15 @@ const items = contentService.getGallery()
           class="tile"
           :class="[`tile--${item.theme}`, { 'tile--wide': i === 0, 'tile--tall': i === 3 }]"
         >
+          <img
+            v-if="item.image && !failed.has(item.id)"
+            :src="item.image"
+            :alt="`${item.brand} ${item.model} — ${t(item.categoryKey)}`"
+            class="tile__img"
+            loading="lazy"
+            decoding="async"
+            @error="failed.add(item.id)"
+          >
           <div class="tile__overlay" aria-hidden="true" />
           <span class="tile__brand">{{ item.brand }}</span>
           <h3 class="tile__model u-display">{{ item.model }}</h3>
@@ -98,17 +113,33 @@ const items = contentService.getGallery()
     &--tall { grid-row: span 2; }
   }
 
+  &__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    transition: transform $dur-slow $ease-out;
+  }
+
+  &:hover &__img {
+    transform: scale(1.05);
+  }
+
   &__overlay {
     position: absolute;
     inset: 0;
+    z-index: 1;
     background:
-      radial-gradient(circle at 75% 15%, rgba(255, 255, 255, 0.25), transparent 45%),
-      linear-gradient(180deg, transparent 30%, rgba(5, 6, 13, 0.7));
+      radial-gradient(circle at 75% 15%, rgba(255, 255, 255, 0.18), transparent 45%),
+      linear-gradient(180deg, rgba(5, 6, 13, 0.15) 20%, rgba(5, 6, 13, 0.8));
     mix-blend-mode: normal;
   }
 
   &__brand {
     position: relative;
+    z-index: 2;
     font-size: $fs-xs;
     font-weight: $fw-bold;
     letter-spacing: 0.28em;
@@ -118,6 +149,7 @@ const items = contentService.getGallery()
 
   &__model {
     position: relative;
+    z-index: 2;
     font-size: clamp(1.8rem, 4vw, 3rem);
     line-height: 0.85;
     text-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
@@ -125,6 +157,7 @@ const items = contentService.getGallery()
 
   &__cat {
     position: relative;
+    z-index: 2;
     margin-top: $space-xs;
     align-self: flex-start;
     padding: 0.3rem 0.7rem;

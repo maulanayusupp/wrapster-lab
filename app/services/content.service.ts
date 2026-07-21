@@ -62,13 +62,15 @@ export const contentService = {
   },
 
   getGallery(): GalleryItem[] {
+    // `image` points at /public/gallery/*. Drop the matching file to replace the
+    // gradient poster with a real build photo (gradient stays as fallback).
     return [
-      { id: 'xmax-ppg', model: 'XMAX', brand: 'Yamaha', categoryKey: 'gallery.cat.concept', theme: 'sunset' },
-      { id: 'nmax', model: 'NMAX', brand: 'Yamaha', categoryKey: 'gallery.cat.street', theme: 'heat' },
-      { id: 'aerox', model: 'AEROX', brand: 'Yamaha', categoryKey: 'gallery.cat.race', theme: 'electric' },
-      { id: 'klx', model: 'KLX', brand: 'Kawasaki', categoryKey: 'gallery.cat.adventure', theme: 'toxic' },
-      { id: 'xride', model: 'X-RIDE', brand: 'Yamaha', categoryKey: 'gallery.cat.street', theme: 'cool' },
-      { id: 'bigbike', model: 'BIG BIKE', brand: 'Superbike', categoryKey: 'gallery.cat.race', theme: 'mono' },
+      { id: 'xmax-ppg', model: 'XMAX', brand: 'Yamaha', categoryKey: 'gallery.cat.concept', theme: 'sunset', image: '/gallery/xmax.jpg' },
+      { id: 'nmax', model: 'NMAX', brand: 'Yamaha', categoryKey: 'gallery.cat.street', theme: 'heat', image: '/gallery/nmax.jpg' },
+      { id: 'aerox', model: 'AEROX', brand: 'Yamaha', categoryKey: 'gallery.cat.race', theme: 'electric', image: '/gallery/aerox.jpg' },
+      { id: 'klx', model: 'KLX', brand: 'Kawasaki', categoryKey: 'gallery.cat.adventure', theme: 'toxic', image: '/gallery/klx.jpg' },
+      { id: 'xride', model: 'X-RIDE', brand: 'Yamaha', categoryKey: 'gallery.cat.street', theme: 'cool', image: '/gallery/xride.jpg' },
+      { id: 'bigbike', model: 'BIG BIKE', brand: 'Superbike', categoryKey: 'gallery.cat.race', theme: 'mono', image: '/gallery/bigbike.jpg' },
     ]
   },
 

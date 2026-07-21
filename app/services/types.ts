@@ -41,8 +41,14 @@ export interface GalleryItem {
   model: string
   brand: string
   categoryKey: string
-  /** Preset gradient theme used for the poster background. */
+  /** Preset gradient theme — the fallback poster background when no photo. */
   theme: GalleryTheme
+  /**
+   * Optional real photo (e.g. '/gallery/xmax.jpg'). When present it renders on
+   * top of the gradient; if the file is missing/broken the gradient shows
+   * through automatically. Drop portfolio images in `public/gallery/`.
+   */
+  image?: string
 }
 
 export type GalleryTheme = 'heat' | 'cool' | 'electric' | 'toxic' | 'sunset' | 'mono'

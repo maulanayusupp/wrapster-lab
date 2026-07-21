@@ -4,10 +4,12 @@ Next features & follow-ups. Keep this current: when you defer something or think
 of an improvement, add it here (per the rules in `CLAUDE.md`).
 
 ## Content — replace placeholders with real assets
-- [ ] **Real project photography.** Gallery + hero currently use CSS "poster"
-      stand-ins (bold model word on themed gradients, matching the IG aesthetic).
-      Drop real images into `public/gallery/` and swap the `.poster`/`.tile`
-      backgrounds for `<NuxtImg>` (see note in `GallerySection.vue`).
+- [ ] **Real project photography.** The gallery is now image-ready: drop files
+      into `public/gallery/` (see `public/gallery/README.md` for filenames) and
+      they render over the gradient automatically (gradient stays as fallback).
+      Source from the brand's IG (`@wrapster.project`) — IG can't be fetched
+      programmatically (login-walled), download manually. The hero poster still
+      uses cycling gradient words by design.
 - [ ] **Real testimonials.** `content.service.ts > getTestimonials()` is
       placeholder copy — replace with genuine, consented customer quotes before
       production. Do not present invented reviews as real.

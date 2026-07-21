@@ -197,10 +197,14 @@ onBeforeUnmount(() => {
     display: grid;
     gap: $space-2xl;
     align-items: center;
-    grid-template-columns: 1fr;
+    // minmax(0, …) lets tracks shrink below content size so the wide poster
+    // can't blow the layout out on narrow viewports.
+    grid-template-columns: minmax(0, 1fr);
+
+    > * { min-width: 0; }
 
     @include respond(lg) {
-      grid-template-columns: 1.05fr 0.95fr;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
       gap: $space-3xl;
     }
   }
@@ -210,6 +214,7 @@ onBeforeUnmount(() => {
     flex-direction: column;
     align-items: flex-start;
     gap: $space-lg;
+    min-width: 0;
   }
 
   &__title {

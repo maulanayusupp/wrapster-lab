@@ -57,7 +57,7 @@ onBeforeUnmount(() => {
 
       <div class="header__actions">
         <LanguageSwitcher />
-        <BaseButton :href="`#${SECTION_IDS.contact}`" size="md" class="header__cta">
+        <BaseButton v-magnetic :href="`#${SECTION_IDS.contact}`" size="md" class="header__cta">
           {{ $t('nav.book') }}
         </BaseButton>
         <button

@@ -34,7 +34,7 @@ const benefits = computed(() => (tm('event.benefits') as unknown[]).map((m) => r
             </span>
           </div>
 
-          <BaseButton :href="appConfig.social.instagram" size="lg" class="event__cta">
+          <BaseButton v-magnetic :href="appConfig.social.instagram" size="lg" class="event__cta">
             {{ t('event.cta') }}
             <template #icon><AppIcon name="arrow-right" :size="20" /></template>
           </BaseButton>

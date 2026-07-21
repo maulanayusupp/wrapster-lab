@@ -17,7 +17,7 @@ const mapsHref = computed(() => appConfig.contact.maps)
         <div class="contact__band-glow" aria-hidden="true" />
         <h2 class="contact__band-title u-display">{{ t('cta.title') }}</h2>
         <p class="contact__band-sub">{{ t('cta.subtitle') }}</p>
-        <BaseButton :href="waHref" size="lg">
+        <BaseButton v-magnetic :href="waHref" size="lg">
           {{ t('cta.button') }}
           <template #icon><AppIcon name="whatsapp" :size="20" /></template>
         </BaseButton>

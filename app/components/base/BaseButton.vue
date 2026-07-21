@@ -59,8 +59,12 @@ const extraAttrs = computed(() => {
   letter-spacing: 0.02em;
   line-height: 1;
   white-space: nowrap;
-  transition: transform $dur-fast $ease-out, box-shadow $dur-base $ease-out,
-    background $dur-base $ease-out, border-color $dur-base $ease-out, opacity $dur-fast;
+  // `translate` (magnetic pull via --mag-*) composes with `transform` (:active
+  // scale) since they are separate CSS properties.
+  translate: var(--mag-x, 0) var(--mag-y, 0);
+  transition: transform $dur-fast $ease-out, translate 0.2s $ease-out,
+    box-shadow $dur-base $ease-out, background $dur-base $ease-out,
+    border-color $dur-base $ease-out, opacity $dur-fast;
 
   &:active {
     transform: scale(0.97);

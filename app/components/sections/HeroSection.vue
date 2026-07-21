@@ -93,11 +93,11 @@ onBeforeUnmount(() => {
         <p class="hero__subtitle">{{ t('hero.subtitle') }}</p>
 
         <div class="hero__actions">
-          <BaseButton :href="`#${SECTION_IDS.contact}`" size="lg">
+          <BaseButton v-magnetic :href="`#${SECTION_IDS.contact}`" size="lg">
             {{ t('hero.ctaPrimary') }}
             <template #icon><AppIcon name="arrow-right" :size="20" /></template>
           </BaseButton>
-          <BaseButton :href="`#${SECTION_IDS.work}`" variant="outline" size="lg">
+          <BaseButton v-magnetic :href="`#${SECTION_IDS.work}`" variant="outline" size="lg">
             {{ t('hero.ctaSecondary') }}
           </BaseButton>
         </div>

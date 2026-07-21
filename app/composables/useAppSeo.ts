@@ -85,6 +85,12 @@ export function useAppSeo(options: AppSeoOptions) {
             addressRegion: 'West Java',
             addressCountry: 'ID',
           },
+          geo: {
+            '@type': 'GeoCoordinates',
+            latitude: appConfig.contact.geo.lat,
+            longitude: appConfig.contact.geo.lng,
+          },
+          hasMap: appConfig.contact.maps,
           sameAs: [appConfig.social.instagram, appConfig.social.linktree],
           slogan: appConfig.brand.tagline,
         }),

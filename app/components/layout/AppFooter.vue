@@ -1,14 +1,14 @@
 <script setup lang="ts">
 /** AppFooter — brand, quick links, contact channels, and legal line. */
 import { NAV_LINKS, SECTION_IDS } from '~/utils/constants'
-import { mapsLink, whatsappLink } from '~/utils/format'
+import { whatsappLink } from '~/utils/format'
 
 const appConfig = useAppConfig()
 const { t } = useI18n()
 
 const year = new Date().getFullYear()
 const waHref = computed(() => whatsappLink(appConfig.contact.phoneIntl, t('contact.waMessage')))
-const mapsHref = computed(() => mapsLink(appConfig.contact.mapsQuery))
+const mapsHref = computed(() => appConfig.contact.maps)
 </script>
 
 <template>

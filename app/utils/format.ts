@@ -21,11 +21,6 @@ export function whatsappLink(phoneIntl: string, message = ''): string {
   return `https://wa.me/${digits}${text}`
 }
 
-/** Build a Google Maps search link. */
-export function mapsLink(query: string): string {
-  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`
-}
-
 /** Two-letter uppercase code for compact locale toggles. */
 export function localeShort(code: string): string {
   return code.slice(0, 2).toUpperCase()

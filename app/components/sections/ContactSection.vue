@@ -1,13 +1,13 @@
 <script setup lang="ts">
 /** ContactSection — contact channels + a final CTA band. */
 import { SECTION_IDS } from '~/utils/constants'
-import { mapsLink, whatsappLink } from '~/utils/format'
+import { whatsappLink } from '~/utils/format'
 
 const { t } = useI18n()
 const appConfig = useAppConfig()
 
 const waHref = computed(() => whatsappLink(appConfig.contact.phoneIntl, t('contact.waMessage')))
-const mapsHref = computed(() => mapsLink(appConfig.contact.mapsQuery))
+const mapsHref = computed(() => appConfig.contact.maps)
 </script>
 
 <template>

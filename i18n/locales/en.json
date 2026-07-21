@@ -34,6 +34,11 @@
   "marquee": {
     "items": ["Full Print", "Custom Concept", "Body Only", "Color Change", "Car Wrapping", "Ship Nationwide", "Stock to Stunning"]
   },
+  "beforeAfter": {
+    "kicker": "Drag to reveal",
+    "title": "See the transformation",
+    "lead": "Slide across to watch a stock ride become a Wrapster statement — same machine, whole new identity."
+  },
   "services": {
     "kicker": "What we do",
     "title": "Every ride, reimagined",

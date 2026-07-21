@@ -34,6 +34,11 @@
   "marquee": {
     "items": ["Full Print", "Konsep Custom", "Body Only", "Ganti Warna", "Wrapping Mobil", "Kirim Nasional", "Stock to Stunning"]
   },
+  "beforeAfter": {
+    "kicker": "Geser untuk lihat",
+    "title": "Lihat transformasinya",
+    "lead": "Geser untuk menyaksikan tampilan standar berubah jadi statement Wrapster — motor yang sama, identitas yang baru."
+  },
   "services": {
     "kicker": "Yang kami kerjakan",
     "title": "Setiap tunggangan, dirombak ulang",

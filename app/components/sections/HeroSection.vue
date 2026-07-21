@@ -322,16 +322,16 @@ const activeModel = computed(() => posterModels[activeIndex.value])
   }
 
   &--swatch {
-    top: 12%;
-    left: -4%;
-    @include respond(lg) { left: -10%; }
+    top: 10%;
+    left: 0;
+    @include respond(lg) { left: -6%; }
   }
   &--warranty {
-    bottom: 14%;
-    right: -2%;
+    bottom: 12%;
+    right: 0;
     color: $color-white;
     animation-delay: 1.2s;
-    @include respond(lg) { right: -8%; }
+    @include respond(lg) { right: -4%; }
   }
 }
 

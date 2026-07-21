@@ -33,12 +33,11 @@ onMounted(() => apply(position.value))
   <section class="ba">
     <div class="u-container ba__inner">
       <div v-reveal class="ba__copy">
-        <span class="u-kicker"><span class="ba__line" />{{ t('hero.titleStock') }} → {{ t('hero.titleStunning') }}</span>
+        <span class="u-kicker"><span class="ba__line" />{{ t('beforeAfter.kicker') }}</span>
         <h2 class="ba__title">
-          {{ t('hero.titleLead') }}
-          <span class="u-gradient-text">{{ t('hero.titleStunning') }}</span>
+          {{ t('hero.titleStock') }} <span class="u-gradient-text">→ {{ t('hero.titleStunning') }}</span>
         </h2>
-        <p class="ba__lead">{{ t('services.lead') }}</p>
+        <p class="ba__lead">{{ t('beforeAfter.lead') }}</p>
       </div>
 
       <div

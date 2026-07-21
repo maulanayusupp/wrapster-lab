@@ -5,6 +5,9 @@ import { whatsappLink } from '~/utils/format'
 
 const appConfig = useAppConfig()
 const { t } = useI18n()
+const localePath = useLocalePath()
+const home = computed(() => localePath('/'))
+const showcase = computed(() => localePath('/showcase'))
 
 const year = new Date().getFullYear()
 const waHref = computed(() => whatsappLink(appConfig.contact.phoneIntl, t('contact.waMessage')))
@@ -32,9 +35,15 @@ const mapsHref = computed(() => appConfig.contact.maps)
 
       <nav class="footer__col" :aria-label="$t('footer.explore')">
         <h3 class="footer__title">{{ $t('footer.explore') }}</h3>
-        <a v-for="link in NAV_LINKS" :key="link.target" :href="`#${link.target}`" class="footer__link">
+        <NuxtLink
+          v-for="link in NAV_LINKS"
+          :key="link.target"
+          :to="`${home}#${link.target}`"
+          class="footer__link"
+        >
           {{ $t(link.key) }}
-        </a>
+        </NuxtLink>
+        <NuxtLink :to="showcase" class="footer__link">{{ $t('nav.showcase') }}</NuxtLink>
       </nav>
 
       <div class="footer__col">

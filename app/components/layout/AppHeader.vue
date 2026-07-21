@@ -11,6 +11,7 @@ const menuOpen = ref(false)
 const progress = ref<HTMLElement | null>(null)
 
 const home = computed(() => localePath('/'))
+const showcase = computed(() => localePath('/showcase'))
 
 function onScroll() {
   scrolled.value = window.scrollY > 24
@@ -50,14 +51,20 @@ onBeforeUnmount(() => {
       </NuxtLink>
 
       <nav class="header__nav" :aria-label="$t('nav.menu')">
-        <a v-for="link in NAV_LINKS" :key="link.target" :href="`#${link.target}`" class="header__link">
+        <NuxtLink
+          v-for="link in NAV_LINKS"
+          :key="link.target"
+          :to="`${home}#${link.target}`"
+          class="header__link"
+        >
           {{ $t(link.key) }}
-        </a>
+        </NuxtLink>
+        <NuxtLink :to="showcase" class="header__link">{{ $t('nav.showcase') }}</NuxtLink>
       </nav>
 
       <div class="header__actions">
         <LanguageSwitcher />
-        <BaseButton v-magnetic :href="`#${SECTION_IDS.contact}`" size="md" class="header__cta">
+        <BaseButton v-magnetic :to="`${home}#${SECTION_IDS.contact}`" size="md" class="header__cta">
           {{ $t('nav.book') }}
         </BaseButton>
         <button
@@ -75,17 +82,20 @@ onBeforeUnmount(() => {
     <Transition name="drawer">
       <div v-if="menuOpen" class="drawer">
         <nav class="drawer__nav" :aria-label="$t('nav.menu')">
-          <a
+          <NuxtLink
             v-for="link in NAV_LINKS"
             :key="link.target"
-            :href="`#${link.target}`"
+            :to="`${home}#${link.target}`"
             class="drawer__link"
             @click="closeMenu"
           >
             {{ $t(link.key) }}
-          </a>
+          </NuxtLink>
+          <NuxtLink :to="showcase" class="drawer__link" @click="closeMenu">
+            {{ $t('nav.showcase') }}
+          </NuxtLink>
         </nav>
-        <BaseButton :href="`#${SECTION_IDS.contact}`" size="lg" block @click="closeMenu">
+        <BaseButton :to="`${home}#${SECTION_IDS.contact}`" size="lg" block @click="closeMenu">
           {{ $t('nav.book') }}
         </BaseButton>
       </div>

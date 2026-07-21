@@ -14,6 +14,7 @@ import type {
   Feature,
   GalleryItem,
   ProcessStep,
+  ShowcaseBuild,
   Stat,
   Testimonial,
   WrapService,
@@ -71,6 +72,26 @@ export const contentService = {
       { id: 'klx', model: 'KLX', brand: 'Kawasaki', categoryKey: 'gallery.cat.adventure', theme: 'toxic', image: '/gallery/klx.jpg' },
       { id: 'xride', model: 'X-RIDE', brand: 'Yamaha', categoryKey: 'gallery.cat.street', theme: 'cool', image: '/gallery/xride.jpg' },
       { id: 'bigbike', model: 'BIG BIKE', brand: 'Superbike', categoryKey: 'gallery.cat.race', theme: 'mono', image: '/gallery/bigbike.jpg' },
+    ]
+  },
+
+  /**
+   * Showcase builds for the /showcase page. Placeholder concept names + CSS
+   * gradient posters (no photos yet) — swap `concept`/add images when real
+   * project media is available.
+   */
+  getShowcaseBuilds(): ShowcaseBuild[] {
+    return [
+      { id: 'prism', model: 'XMAX', brand: 'Yamaha', concept: 'Prism Riot', category: 'concept', categoryKey: 'gallery.cat.concept', theme: 'sunset', finishKey: 'colors.finish.satin', year: '2026', featured: true },
+      { id: 'tiger', model: 'NMAX', brand: 'Yamaha', concept: 'Midnight Tiger', category: 'street', categoryKey: 'gallery.cat.street', theme: 'heat', finishKey: 'colors.finish.gloss', year: '2026' },
+      { id: 'champ', model: 'AEROX', brand: 'Yamaha', concept: 'Champion Livery', category: 'race', categoryKey: 'gallery.cat.race', theme: 'electric', finishKey: 'colors.finish.gloss', year: '2025' },
+      { id: 'bloom', model: 'KLX', brand: 'Kawasaki', concept: 'Toxic Bloom', category: 'adventure', categoryKey: 'gallery.cat.adventure', theme: 'toxic', finishKey: 'colors.finish.matte', year: '2026' },
+      { id: 'pulse', model: 'X-RIDE', brand: 'Yamaha', concept: 'Street Pulse', category: 'street', categoryKey: 'gallery.cat.street', theme: 'cool', finishKey: 'colors.finish.satin', year: '2025' },
+      { id: 'phantom', model: 'BIG BIKE', brand: 'Superbike', concept: 'Carbon Phantom', category: 'race', categoryKey: 'gallery.cat.race', theme: 'mono', finishKey: 'colors.finish.matte', year: '2026' },
+      { id: 'samurai', model: 'XMAX', brand: 'Yamaha', concept: 'Neon Samurai', category: 'concept', categoryKey: 'gallery.cat.concept', theme: 'cool', finishKey: 'colors.finish.gloss', year: '2026' },
+      { id: 'retro', model: 'VESPA', brand: 'Vespa', concept: 'Retro Wave', category: 'street', categoryKey: 'gallery.cat.street', theme: 'sunset', finishKey: 'colors.finish.gloss', year: '2025' },
+      { id: 'frost', model: 'CBR', brand: 'Honda', concept: 'Frost Wolf', category: 'race', categoryKey: 'gallery.cat.race', theme: 'electric', finishKey: 'colors.finish.satin', year: '2026' },
+      { id: 'candy', model: 'SCOOPY', brand: 'Honda', concept: 'Candy Pop', category: 'concept', categoryKey: 'gallery.cat.concept', theme: 'heat', finishKey: 'colors.finish.gloss', year: '2025' },
     ]
   },
 

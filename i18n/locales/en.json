@@ -3,6 +3,10 @@
     "home": {
       "title": "Premium Motorcycle & Car Wrapping",
       "desc": "Wrapster Lab turns stock rides into stunning statements. Premium full-print wraps, custom concepts, and precision color changes — shipped nationwide."
+    },
+    "showcase": {
+      "title": "Build Gallery — Showcase",
+      "desc": "A curated archive of Wrapster Lab builds — custom concepts, street styles, race liveries and adventure wraps. One of one, every time."
     }
   },
   "nav": {
@@ -11,9 +15,38 @@
     "process": "Process",
     "why": "Why Us",
     "community": "Community",
+    "showcase": "Showcase",
     "book": "Book a Wrap",
     "menu": "Menu",
     "close": "Close"
+  },
+  "showcase": {
+    "kicker": "The lab archive",
+    "title": "Build Gallery",
+    "lead": "A curated slice of what rolls out of the lab. Every build is one of one — filter by style and dive in.",
+    "counter": "builds and counting",
+    "featured": "Featured build",
+    "filterAll": "All",
+    "filterLabel": "Filter by style",
+    "view": "View build",
+    "close": "Close",
+    "meta": {
+      "vehicle": "Vehicle",
+      "finish": "Finish",
+      "year": "Year",
+      "style": "Style"
+    },
+    "modal": {
+      "overview": "Overview",
+      "desc": "A one-of-one build from the Wrapster Lab floor. Concept-driven design, premium film, and precision installation — from mockup to stunning. (Placeholder copy — real project story coming soon.)",
+      "specs": "Build specs",
+      "cta": "Start a build like this"
+    },
+    "cta": {
+      "title": "Your build is next",
+      "subtitle": "Bring your idea to the lab and join the gallery.",
+      "button": "Start Your Build"
+    }
   },
   "language": {
     "label": "Language",

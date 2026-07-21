@@ -53,6 +53,23 @@ export interface GalleryItem {
 
 export type GalleryTheme = 'heat' | 'cool' | 'electric' | 'toxic' | 'sunset' | 'mono'
 
+export type ShowcaseCategory = 'concept' | 'street' | 'race' | 'adventure'
+
+export interface ShowcaseBuild {
+  id: string
+  /** Vehicle / model name rendered as the poster word. */
+  model: string
+  brand: string
+  /** Creative build/concept name (placeholder copy for now). */
+  concept: string
+  category: ShowcaseCategory
+  categoryKey: string
+  theme: GalleryTheme
+  finishKey: string
+  year: string
+  featured?: boolean
+}
+
 export interface ColorSwatch {
   id: string
   nameKey: string

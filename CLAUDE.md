@@ -41,13 +41,14 @@ app/
     base/        AppIcon, BaseButton, BaseBadge, SectionHeading  (reusable primitives)
     layout/      AppHeader, AppFooter, LanguageSwitcher, TheLogo
     sections/    one component per landing section (Hero, Services, …)
+    showcase/    ShowcaseCard, ShowcaseModal (for the /showcase Build Gallery)
   composables/   useAppSeo, useReveal            (helpers, auto-imported)
   plugins/       reveal.ts (v-reveal), spotlight.ts (v-spotlight),
                  magnetic.ts (v-magnetic), parallax.ts (v-parallax scroll drift)
   services/      content.service.ts + types.ts   (the data boundary)
   utils/         constants.ts, format.ts         (pure helpers, auto-imported)
   layouts/       default.vue
-  pages/         index.vue
+  pages/         index.vue, showcase.vue (Build Gallery — filterable + modal)
   app.vue · error.vue · app.config.ts
 i18n/locales/    en.json · id.json
 public/          favicon.svg, icons, og-image, manifest, robots

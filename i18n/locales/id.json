@@ -3,6 +3,10 @@
     "home": {
       "title": "Wrapping Motor & Mobil Premium",
       "desc": "Wrapster Lab mengubah tampilan standar jadi memukau. Wrapping full-print premium, konsep custom, dan ganti warna presisi — kirim ke seluruh Indonesia."
+    },
+    "showcase": {
+      "title": "Galeri Build — Showcase",
+      "desc": "Arsip pilihan hasil build Wrapster Lab — konsep custom, gaya jalanan, livery balap, dan wrap adventure. Selalu satu-satunya di dunia."
     }
   },
   "nav": {
@@ -11,9 +15,38 @@
     "process": "Proses",
     "why": "Kenapa Kami",
     "community": "Komunitas",
+    "showcase": "Showcase",
     "book": "Pesan Sekarang",
     "menu": "Menu",
     "close": "Tutup"
+  },
+  "showcase": {
+    "kicker": "Arsip lab",
+    "title": "Galeri Build",
+    "lead": "Cuplikan pilihan hasil dari lab. Setiap build satu-satunya di dunia — filter berdasarkan gaya dan telusuri.",
+    "counter": "build dan terus bertambah",
+    "featured": "Build unggulan",
+    "filterAll": "Semua",
+    "filterLabel": "Filter berdasarkan gaya",
+    "view": "Lihat build",
+    "close": "Tutup",
+    "meta": {
+      "vehicle": "Kendaraan",
+      "finish": "Finishing",
+      "year": "Tahun",
+      "style": "Gaya"
+    },
+    "modal": {
+      "overview": "Ringkasan",
+      "desc": "Build satu-satunya dari lantai Wrapster Lab. Desain berbasis konsep, film premium, dan pemasangan presisi — dari mockup jadi memukau. (Teks placeholder — cerita proyek asli menyusul.)",
+      "specs": "Spesifikasi build",
+      "cta": "Mulai build serupa"
+    },
+    "cta": {
+      "title": "Build kamu berikutnya",
+      "subtitle": "Bawa idemu ke lab dan gabung ke galeri.",
+      "button": "Mulai Build"
+    }
   },
   "language": {
     "label": "Bahasa",

@@ -15,6 +15,9 @@ of an improvement, add it here (per the rules in `CLAUDE.md`).
       production. Do not present invented reviews as real.
 - [ ] **Real price list** section (their IG has a "PRICE LIST" post) — add a
       `PricingSection` + `getPricing()` in the service.
+- [ ] **Showcase builds** (`/showcase`) use placeholder concept names + CSS
+      gradient posters (`getShowcaseBuilds()`). Replace concepts with real build
+      stories and add photos (extend the modal + card with `<NuxtImg>`).
 - [ ] Confirm exact address, WhatsApp number, and email in `app/app.config.ts`.
 - [ ] Point `runtimeConfig.public.siteUrl` + i18n `baseUrl` at the real domain.
 

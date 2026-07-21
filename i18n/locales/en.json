@@ -37,7 +37,9 @@
   "beforeAfter": {
     "kicker": "Drag to reveal",
     "title": "See the transformation",
-    "lead": "Slide across to watch a stock ride become a Wrapster statement — same machine, whole new identity."
+    "lead": "Slide across to watch a stock ride become a Wrapster statement — same machine, whole new identity.",
+    "before": "Before",
+    "after": "After"
   },
   "services": {
     "kicker": "What we do",
@@ -152,6 +154,11 @@
     "title": "Your ride deserves better than stock",
     "subtitle": "Book a slot at the lab and let's turn it into a statement.",
     "button": "Book a Wrap"
+  },
+  "error": {
+    "title": "Off the grid",
+    "message": "This page took a wrong turn.",
+    "cta": "Back to the lab"
   },
   "footer": {
     "tagline": "Premium motorcycle & car wrapping. Stock to Stunning.",

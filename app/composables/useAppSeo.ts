@@ -20,7 +20,9 @@ interface AppSeoOptions {
 }
 
 export function useAppSeo(options: AppSeoOptions) {
-  const { title, description, image = '/og-image.png', withBrand = true } = options
+  // JPEG keeps the share image well under WhatsApp's preview size limit so the
+  // thumbnail reliably renders in chats.
+  const { title, description, image = '/og-image.jpg', withBrand = true } = options
 
   const config = useRuntimeConfig()
   const appConfig = useAppConfig()
@@ -37,6 +39,8 @@ export function useAppSeo(options: AppSeoOptions) {
     meta: computed(() => [...(i18nHead.value.meta || [])]),
   })
 
+  const imageAlt = `${appConfig.brand.name} — ${appConfig.brand.tagline}`
+
   useSeoMeta({
     title: fullTitle,
     description,
@@ -44,12 +48,20 @@ export function useAppSeo(options: AppSeoOptions) {
     ogTitle: fullTitle,
     ogDescription: description,
     ogImage,
+    ogImageSecureUrl: ogImage,
+    ogImageType: 'image/jpeg',
+    ogImageWidth: 1200,
+    ogImageHeight: 630,
+    ogImageAlt: imageAlt,
     ogSiteName: appConfig.brand.name,
     ogUrl: siteUrl,
+    ogLocale: 'en_US',
+    ogLocaleAlternate: 'id_ID',
     twitterCard: 'summary_large_image',
     twitterTitle: fullTitle,
     twitterDescription: description,
     twitterImage: ogImage,
+    twitterImageAlt: imageAlt,
     themeColor: '#070912',
   })
 

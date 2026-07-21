@@ -55,13 +55,13 @@ onMounted(() => apply(position.value))
       >
         <!-- BEFORE (stock) -->
         <div class="panel panel--before">
-          <span class="panel__word u-display">Stock</span>
-          <span class="panel__tag">Before</span>
+          <span class="panel__word u-display">{{ t('hero.titleStock') }}</span>
+          <span class="panel__tag">{{ t('beforeAfter.before') }}</span>
         </div>
         <!-- AFTER (stunning) — clipped by --reveal -->
         <div class="panel panel--after">
-          <span class="panel__word u-display">Stunning</span>
-          <span class="panel__tag panel__tag--after">After</span>
+          <span class="panel__word u-display">{{ t('hero.titleStunning') }}</span>
+          <span class="panel__tag panel__tag--after">{{ t('beforeAfter.after') }}</span>
           <span class="panel__stripe panel__stripe--1" />
           <span class="panel__stripe panel__stripe--2" />
         </div>

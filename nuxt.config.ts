@@ -25,7 +25,9 @@ export default defineNuxtConfig({
   // ---------------------------------------------------------------------------
   runtimeConfig: {
     public: {
-      siteUrl: 'https://wrapster.lab',
+      // No custom domain yet — deployed on Vercel. Override at deploy time with
+      // NUXT_PUBLIC_SITE_URL when a real domain is connected.
+      siteUrl: 'https://wrapster-lab.vercel.app',
       siteName: 'Wrapster Lab',
       contactPhone: '+6281111198694',
       instagram: 'https://www.instagram.com/wrapster.lab',
@@ -70,7 +72,7 @@ export default defineNuxtConfig({
     defaultLocale: 'en',
     langDir: 'locales',
     lazy: true,
-    baseUrl: 'https://wrapster.lab',
+    baseUrl: 'https://wrapster-lab.vercel.app',
     locales: [
       { code: 'en', language: 'en-US', name: 'English', file: 'en.json', dir: 'ltr' },
       { code: 'id', language: 'id-ID', name: 'Bahasa Indonesia', file: 'id.json', dir: 'ltr' },

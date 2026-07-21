@@ -3,6 +3,7 @@ import type { NuxtError } from '#app'
 
 defineProps<{ error: NuxtError }>()
 
+const { t } = useI18n()
 const localePath = useLocalePath()
 function goHome() {
   clearError({ redirect: localePath('/') })
@@ -14,10 +15,10 @@ function goHome() {
     <div class="err__blob" aria-hidden="true" />
     <div class="err__inner">
       <span class="err__code u-display u-gradient-text">{{ error.statusCode || 500 }}</span>
-      <h1 class="err__title u-display">Off the grid</h1>
-      <p class="err__msg">{{ error.message || 'This page took a wrong turn.' }}</p>
+      <h1 class="err__title u-display">{{ t('error.title') }}</h1>
+      <p class="err__msg">{{ error.message || t('error.message') }}</p>
       <BaseButton size="lg" @click="goHome">
-        Back to the lab
+        {{ t('error.cta') }}
         <template #icon><AppIcon name="arrow-right" :size="20" /></template>
       </BaseButton>
     </div>

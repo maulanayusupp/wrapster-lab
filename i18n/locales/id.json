@@ -37,7 +37,9 @@
   "beforeAfter": {
     "kicker": "Geser untuk lihat",
     "title": "Lihat transformasinya",
-    "lead": "Geser untuk menyaksikan tampilan standar berubah jadi statement Wrapster — motor yang sama, identitas yang baru."
+    "lead": "Geser untuk menyaksikan tampilan standar berubah jadi statement Wrapster — motor yang sama, identitas yang baru.",
+    "before": "Sebelum",
+    "after": "Sesudah"
   },
   "services": {
     "kicker": "Yang kami kerjakan",
@@ -152,6 +154,11 @@
     "title": "Tungganganmu layak lebih dari sekadar standar",
     "subtitle": "Pesan slot di lab dan mari ubah jadi sesuatu yang mencolok.",
     "button": "Pesan Wrapping"
+  },
+  "error": {
+    "title": "Keluar jalur",
+    "message": "Halaman ini nyasar.",
+    "cta": "Kembali ke lab"
   },
   "footer": {
     "tagline": "Wrapping motor & mobil premium. Stock to Stunning.",

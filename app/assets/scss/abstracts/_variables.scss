@@ -53,7 +53,9 @@ $fw-bold:      700;
 $fw-black:     900;
 
 // Fluid type scale (clamp) — display sizes lean poster-heavy.
-$fs-hero:   clamp(3rem, 9vw, 8.5rem);
+// Capped so the longest word ("STUNNING") always fits the hero's left column
+// even on ultra-wide screens (the container maxes at 1240, but vw keeps growing).
+$fs-hero:   clamp(2.6rem, 6.5vw, 5.5rem);
 $fs-h1:     clamp(2.4rem, 6vw, 5rem);
 $fs-h2:     clamp(2.05rem, 4.4vw, 3.6rem);
 $fs-h3:     clamp(1.35rem, 2.2vw, 1.9rem);

@@ -24,9 +24,9 @@ withDefaults(defineProps<Props>(), { align: 'left' })
 .heading {
   display: flex;
   flex-direction: column;
-  gap: $space-md;
-  max-width: 46rem;
-  margin-bottom: $space-2xl;
+  gap: $space-lg;
+  max-width: 48rem;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
 
   &--center {
     align-items: center;
@@ -34,8 +34,12 @@ withDefaults(defineProps<Props>(), { align: 'left' })
     margin-inline: auto;
   }
 
+  &__kicker {
+    gap: $space-sm;
+  }
+
   &__kicker-line {
-    width: 28px;
+    width: 32px;
     height: 2px;
     background: $gradient-heat;
     border-radius: $radius-pill;
@@ -43,12 +47,16 @@ withDefaults(defineProps<Props>(), { align: 'left' })
 
   &__title {
     font-size: $fs-h2;
+    letter-spacing: -0.03em;
+    line-height: 0.96;
   }
 
   &__lead {
     font-size: $fs-lead;
+    line-height: 1.6;
     color: var(--c-text-mist);
-    max-width: 40rem;
+    max-width: 42rem;
+    text-wrap: pretty;
   }
 }
 </style>

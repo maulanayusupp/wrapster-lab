@@ -32,8 +32,9 @@ body {
   min-height: 100vh;
   font-family: $font-body;
   font-size: $fs-body;
-  line-height: 1.6;
+  line-height: 1.65;
   color: var(--c-text);
+  letter-spacing: -0.006em;
   background: var(--c-bg);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

@@ -41,9 +41,9 @@ $breakpoints: (
   padding-inline: $container-pad;
 }
 
-/// Standard vertical rhythm for full-bleed sections.
+/// Standard vertical rhythm for full-bleed sections (generous, editorial).
 @mixin section-space {
-  padding-block: clamp(4rem, 10vw, 8rem);
+  padding-block: clamp(4.5rem, 11vw, 9.5rem);
 }
 
 /// Flex helper.
